@@ -1,0 +1,7 @@
+#Wed Mar 15 16:08:48 CST 2017
+base.0=F\:\\MPAndroidChartDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_b098dd01ad3548979912ef28a83c2e45a24bcd1c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=F\:\\MPAndroidChartDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_a3bed58e930ba29fdc211bfa0611ef8f072c83cf\\classes.dex
+base.1=F\:\\MPAndroidChartDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_a3bed58e930ba29fdc211bfa0611ef8f072c83cf
+file.0=F\:\\MPAndroidChartDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_b098dd01ad3548979912ef28a83c2e45a24bcd1c\\classes.dex

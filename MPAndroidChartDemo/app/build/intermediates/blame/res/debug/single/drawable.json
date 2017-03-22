@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_null.png",
+        "source": "F:\\MPAndroidChartDemo\\app\\src\\main\\res\\drawable\\bg_null.png"
+    },
+    {
+        "merged": "F:\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_text_selector.xml",
+        "source": "F:\\MPAndroidChartDemo\\app\\src\\main\\res\\drawable\\tab_text_selector.xml"
+    },
+    {
+        "merged": "F:\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\line_bg_pressed.png",
+        "source": "F:\\MPAndroidChartDemo\\app\\src\\main\\res\\drawable\\line_bg_pressed.png"
+    },
+    {
+        "merged": "F:\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chart_view_selector_line.xml",
+        "source": "F:\\MPAndroidChartDemo\\app\\src\\main\\res\\drawable\\chart_view_selector_line.xml"
+    }
+]
