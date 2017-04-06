@@ -7,6 +7,8 @@
 
 package com.barchart.mpchartdemo;
 
+import com.github.mikephil.chart_3_0_1v.charts.LineChart;
+
 public final class R {
     public static final class attr {
     }
@@ -24,7 +26,7 @@ public final class R {
     public static final class id {
         public static final int action_settings=0x7f080006;
         public static final int barChart=0x7f080005;
-        public static final int lineChart=0x7f080004;
+        public static final LineChart lineChart=0x7f080004;
         public static final int pager=0x7f080003;
         public static final int rBtn_newTab=0x7f080002;
         public static final int rBtn_oldTab=0x7f080001;

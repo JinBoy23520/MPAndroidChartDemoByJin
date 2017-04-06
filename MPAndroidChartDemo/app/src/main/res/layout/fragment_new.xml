@@ -5,7 +5,7 @@
     tools:context="com.barchart.mpchartdemo.NewFragment">
 
     <com.github.mikephil.chart_3_0_1v.charts.LineChart
-        android:id="@+id/lineChart"
+        android:id="@+id/new_lineChart"
         android:layout_width="match_parent"
         android:layout_height="250dp"/>
 

@@ -70,6 +70,13 @@ public class MarkerView extends RelativeLayout implements IMarker {
         return mOffset;
     }
 
+    /*
+    添加接口，解决MarkView显示问题
+     */
+    public MPPointF getOffsetRight() {
+        return mOffset;
+    }
+
     public void setChartView(Chart chart) {
         mWeakChart = new WeakReference<>(chart);
     }
@@ -89,12 +96,19 @@ public class MarkerView extends RelativeLayout implements IMarker {
 
         float width = getWidth();
         float height = getHeight();
+        //添加当点解右边往又显示
+        if (chart != null && posX + width + mOffset2.x > chart.getWidth()) {
+            offset = getOffsetRight();
+            mOffset2.x = offset.x;
+        }
 
         if (posX + mOffset2.x < 0) {
             mOffset2.x = - posX;
-        } else if (chart != null && posX + width + mOffset2.x > chart.getWidth()) {
-            mOffset2.x = chart.getWidth() - posX - width;
         }
+        //修改解决显示问题
+//        else if (chart != null && posX + width + mOffset2.x > chart.getWidth()) {
+//            mOffset2.x = chart.getWidth() - posX - width;
+//        }
 
         if (posY + mOffset2.y < 0) {
             mOffset2.y = - posY;
