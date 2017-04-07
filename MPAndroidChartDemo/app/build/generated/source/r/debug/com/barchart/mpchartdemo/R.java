@@ -7,8 +7,6 @@
 
 package com.barchart.mpchartdemo;
 
-import com.github.mikephil.chart_3_0_1v.charts.LineChart;
-
 public final class R {
     public static final class attr {
     }
@@ -18,24 +16,31 @@ public final class R {
     }
     public static final class drawable {
         public static final int bg_null=0x7f020000;
-        public static final int chart_view_selector_line=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int line_bg_pressed=0x7f020003;
-        public static final int tab_text_selector=0x7f020004;
+        public static final int chart_callserice_call_casecount=0x7f020001;
+        public static final int chart_popu=0x7f020002;
+        public static final int chart_popu_right=0x7f020003;
+        public static final int chart_thisyear_blue=0x7f020004;
+        public static final int chart_view_selector_line=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int line_bg_pressed=0x7f020007;
+        public static final int tab_text_selector=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
-        public static final int barChart=0x7f080005;
-        public static final LineChart lineChart=0x7f080004;
+        public static final int action_settings=0x7f080008;
+        public static final int barChart=0x7f080006;
+        public static final int lineChart=0x7f080007;
+        public static final int new_lineChart=0x7f080005;
         public static final int pager=0x7f080003;
         public static final int rBtn_newTab=0x7f080002;
         public static final int rBtn_oldTab=0x7f080001;
         public static final int rGrpAllTabP=0x7f080000;
+        public static final int tvContent=0x7f080004;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int fragment_new=0x7f030001;
-        public static final int fragment_old=0x7f030002;
+        public static final int custom_marker_view_layout=0x7f030001;
+        public static final int fragment_new=0x7f030002;
+        public static final int fragment_old=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;

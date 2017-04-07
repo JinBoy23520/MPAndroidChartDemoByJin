@@ -24,6 +24,10 @@ import com.github.mikephil.chart_3_0_1v.formatter.IAxisValueFormatter;
 import com.github.mikephil.chart_3_0_1v.formatter.IValueFormatter;
 import com.github.mikephil.chart_3_0_1v.utils.ViewPortHandler;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +51,37 @@ public class NewFragment extends Fragment {
         mView = inflater.inflate(R.layout.fragment_new, container, false);
         initViews();
         return mView;
+    }
+
+    /**
+     * 下面json转实体类，完成一半
+     */
+    String data = "{\"realList\":[{\"amount\":\"3740\",\"month\":\"1\",\"year\":\"2017\"},{\"amount\":\"2382\",\"month\":\"2\",\"year\":\"2017\"},{\"amount\":\"3329\",\"month\":\"3\",\"year\":\"2017\"},{\"amount\":\"463\",\"month\":\"4\",\"year\":\"2017\"}],\n" +
+            "\"yoyList\":[{\"amount\":\"4571\",\"month\":\"1\",\"year\":\"2016\"},{\"amount\":\"1630\",\"month\":\"2\",\"year\":\"2016\"},{\"amount\":\"2589\",\"month\":\"3\",\"year\":\"2016\"},{\"amount\":\"2180\",\"month\":\"4\",\"year\":\"2016\"},{\"amount\":\"3089\",\"month\":\"5\",\"year\":\"2016\"},{\"amount\":\"4906\",\"month\":\"6\",\"year\":\"2016\"},{\"amount\":\"5741\",\"month\":\"7\",\"year\":\"2016\"},{\"amount\":\"3611\",\"month\":\"8\",\"year\":\"2016\"},{\"amount\":\"2458\",\"month\":\"9\",\"year\":\"2016\"},{\"amount\":\"2608\",\"month\":\"10\",\"year\":\"2016\"},{\"amount\":\"5437\",\"month\":\"11\",\"year\":\"2016\"},{\"amount\":\"4219\",\"month\":\"12\",\"year\":\"2016\"}]}";
+
+    public void test(){
+        String data = "{\"realList\":[{\"amount\":\"3740\",\"month\":\"1\",\"year\":\"2017\"},{\"amount\":\"2382\",\"month\":\"2\",\"year\":\"2017\"},{\"amount\":\"3329\",\"month\":\"3\",\"year\":\"2017\"},{\"amount\":\"463\",\"month\":\"4\",\"year\":\"2017\"}],\n" +
+                "\"yoyList\":[{\"amount\":\"4571\",\"month\":\"1\",\"year\":\"2016\"},{\"amount\":\"1630\",\"month\":\"2\",\"year\":\"2016\"},{\"amount\":\"2589\",\"month\":\"3\",\"year\":\"2016\"},{\"amount\":\"2180\",\"month\":\"4\",\"year\":\"2016\"},{\"amount\":\"3089\",\"month\":\"5\",\"year\":\"2016\"},{\"amount\":\"4906\",\"month\":\"6\",\"year\":\"2016\"},{\"amount\":\"5741\",\"month\":\"7\",\"year\":\"2016\"},{\"amount\":\"3611\",\"month\":\"8\",\"year\":\"2016\"},{\"amount\":\"2458\",\"month\":\"9\",\"year\":\"2016\"},{\"amount\":\"2608\",\"month\":\"10\",\"year\":\"2016\"},{\"amount\":\"5437\",\"month\":\"11\",\"year\":\"2016\"},{\"amount\":\"4219\",\"month\":\"12\",\"year\":\"2016\"}]}";
+        try {
+            JSONObject object = new JSONObject(data);
+            JSONArray jsonArray = object.getJSONArray("realList");
+            realList = new ArrayList<>();
+            for (int i = 0, count = jsonArray.length(); i < count; i++){
+                //改了这里
+                JSONObject jsonObject = jsonArray.optJSONObject(i);//{"amount":"3740","month":"1","year":"2017"}
+                RealListEntity realListEntity = new RealListEntity();
+                String amount = jsonObject.optString("amount");
+                String month = jsonObject.optString("month");
+                String year = jsonObject.optString("year");
+                realListEntity.setAmount(amount);
+                realListEntity.setMonth(month);
+                realListEntity.setYear(year);
+                realList.add(realListEntity);
+                System.out.println("-=-=-=>" + amount);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void initViews(){
