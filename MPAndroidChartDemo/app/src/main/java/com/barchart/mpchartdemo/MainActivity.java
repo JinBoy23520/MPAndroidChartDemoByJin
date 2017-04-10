@@ -32,7 +32,6 @@ public class MainActivity extends FragmentActivity {
 		rBtn_newTab = (RadioButton)findViewById(R.id.rBtn_newTab);
 		initListener();
 		setUpViewPager();
-		//test commit
 	}
 
 	public void initListener() {
