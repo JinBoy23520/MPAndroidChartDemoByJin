@@ -71,6 +71,7 @@ public class MainActivity extends FragmentActivity {
 		mViewPager.setOffscreenPageLimit(listFragment.size());
 	}
 
+	//改一下
 	private void setUpViewPager() {
 		//改动了
 		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
@@ -104,7 +105,8 @@ public class MainActivity extends FragmentActivity {
 //                }
 			}
 		});
-		//加注释
+
+		//再改一下
 		if (mViewPager != null) mViewPager.setCurrentItem(0, true);
 	}
 }
