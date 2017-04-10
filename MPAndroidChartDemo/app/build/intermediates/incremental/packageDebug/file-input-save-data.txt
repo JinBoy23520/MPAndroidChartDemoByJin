@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Apr 10 11:21:23 CST 2017
+#Mon Apr 10 11:31:17 CST 2017
 25.file=D\:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_1cf668b68a1134390cda3f55cc4a0f62e3f89fb7\\classes.dex
 25.base=D\:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_1cf668b68a1134390cda3f55cc4a0f62e3f89fb7
 22.set=ANDROID_RESOURCE

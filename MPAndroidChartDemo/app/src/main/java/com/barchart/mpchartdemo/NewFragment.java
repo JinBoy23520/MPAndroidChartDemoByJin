@@ -163,6 +163,11 @@ public class NewFragment extends Fragment {
         lineChartEntity.drawCircle(true);
         lineChart.setScaleMinima(1.0f, 1.0f);
         toggleFilled(lineChartEntity, drawables, colors);
+
+        /**
+         * 这里切换平滑曲线或者折现图
+         */
+//        lineChartEntity.setLineMode(LineDataSet.Mode.CUBIC_BEZIER);
         lineChartEntity.setLineMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
         lineChartEntity.initLegend(Legend.LegendForm.CIRCLE, 12f, Color.parseColor("#999999"));
         lineChartEntity.updateLegendOrientation(Legend.LegendVerticalAlignment.TOP, Legend.LegendHorizontalAlignment.RIGHT, Legend.LegendOrientation.HORIZONTAL);

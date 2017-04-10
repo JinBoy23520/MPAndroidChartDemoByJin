@@ -4,19 +4,19 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="8343429408348"
+    timestamp="8937393483831"
     token="-7761120674544607739"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="124" />
+        duration="117" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="17" />
+        duration="15" />
     <task
         name="verifier"
         duration="4" />
@@ -26,7 +26,7 @@
         type="MAIN" />
 
     <build
-        timestamp="8343429408348"
+        timestamp="8937393483831"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
