@@ -72,6 +72,7 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	private void setUpViewPager() {
+		//改动了
 		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
 			@Override
 			public void onPageSelected(int position) {
@@ -103,6 +104,7 @@ public class MainActivity extends FragmentActivity {
 //                }
 			}
 		});
+		//加注释
 		if (mViewPager != null) mViewPager.setCurrentItem(0, true);
 	}
 }
