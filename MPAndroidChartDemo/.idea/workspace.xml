@@ -48,14 +48,14 @@
       <file leaf-file-name="NewFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barchart/mpchartdemo/NewFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+            <state relative-caret-position="273">
+              <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9396#9636#0" expanded="true" />
-                <element signature="e#9635#9636#0" expanded="true" />
-                <element signature="e#10077#11132#0" expanded="true" />
-                <element signature="e#11131#11132#0" expanded="true" />
+                <element signature="e#8421#8661#0" expanded="true" />
+                <element signature="e#8660#8661#0" expanded="true" />
+                <element signature="e#9102#10157#0" expanded="true" />
+                <element signature="e#10156#10157#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3181,10 +3181,10 @@
           <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9396#9636#0" expanded="true" />
-            <element signature="e#9635#9636#0" expanded="true" />
-            <element signature="e#10077#11132#0" expanded="true" />
-            <element signature="e#11131#11132#0" expanded="true" />
+            <element signature="e#8421#8661#0" expanded="true" />
+            <element signature="e#8660#8661#0" expanded="true" />
+            <element signature="e#9102#10157#0" expanded="true" />
+            <element signature="e#10156#10157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3250,10 +3250,10 @@
           <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9396#9636#0" expanded="true" />
-            <element signature="e#9635#9636#0" expanded="true" />
-            <element signature="e#10077#11132#0" expanded="true" />
-            <element signature="e#11131#11132#0" expanded="true" />
+            <element signature="e#8421#8661#0" expanded="true" />
+            <element signature="e#8660#8661#0" expanded="true" />
+            <element signature="e#9102#10157#0" expanded="true" />
+            <element signature="e#10156#10157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3529,14 +3529,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barchart/mpchartdemo/NewFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+        <state relative-caret-position="273">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9396#9636#0" expanded="true" />
-            <element signature="e#9635#9636#0" expanded="true" />
-            <element signature="e#10077#11132#0" expanded="true" />
-            <element signature="e#11131#11132#0" expanded="true" />
+            <element signature="e#8421#8661#0" expanded="true" />
+            <element signature="e#8660#8661#0" expanded="true" />
+            <element signature="e#9102#10157#0" expanded="true" />
+            <element signature="e#10156#10157#0" expanded="true" />
           </folding>
         </state>
       </provider>
