@@ -1,17 +1,5 @@
 [
     {
-        "merged": "F:\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_old.xml",
-        "source": "F:\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\fragment_old.xml"
-    },
-    {
-        "merged": "F:\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "F:\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "F:\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_new.xml",
-        "source": "F:\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\fragment_new.xml"
-    },
-    {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_new.xml",
         "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\fragment_new.xml"
     },

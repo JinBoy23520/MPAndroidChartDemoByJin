@@ -44,11 +44,14 @@ public class NewFragment extends Fragment {
     private List<RealListEntity> realList;
     private List<YoyListEntity> yoyList;
     private List<Entry> values1, values2;
+    private RealListEntity realListEntity;
+    private YoyListEntity yoyListEntity;
     private DecimalFormat mFormat;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_new, container, false);
+        test();
         initViews();
         return mView;
     }
@@ -77,7 +80,21 @@ public class NewFragment extends Fragment {
                 realListEntity.setMonth(month);
                 realListEntity.setYear(year);
                 realList.add(realListEntity);
-                System.out.println("-=-=-=>" + amount);
+            }
+
+            JSONArray jsonArray1 = object.getJSONArray("yoyList");
+            yoyList = new ArrayList<>();
+            for (int i = 0, count = jsonArray1.length(); i < count; i++){
+                //改了这里
+                JSONObject jsonObject = jsonArray1.optJSONObject(i);//{"amount":"3740","month":"1","year":"2017"}
+                YoyListEntity yoyListEntity = new YoyListEntity();
+                String amount = jsonObject.optString("amount");
+                String month = jsonObject.optString("month");
+                String year = jsonObject.optString("year");
+                yoyListEntity.setAmount(amount);
+                yoyListEntity.setMonth(month);
+                yoyListEntity.setYear(year);
+                yoyList.add(yoyListEntity);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -87,6 +104,42 @@ public class NewFragment extends Fragment {
     public void initViews(){
         mFormat = new DecimalFormat("#,###.##");
         lineChart = (LineChart)mView.findViewById(R.id.new_lineChart);
+
+        values1 = new ArrayList<>();
+        values2 = new ArrayList<>();
+        for (int i = 0; i < yoyList.size(); i++) {
+            yoyListEntity = yoyList.get(i);
+            String amount = yoyListEntity.getAmount();
+            if (amount != null) {
+                float f = 0;
+                try {
+                    f = Float.parseFloat(amount);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    f = 0;
+                }
+                Entry entry = new Entry(i + 1, f);
+                values1.add(entry);
+            }
+        }
+
+        for (int i = 0; i < realList.size(); i++) {
+            realListEntity = realList.get(i);
+            String amount = realListEntity.getAmount();
+            if (amount != null) {
+                float f = 0;
+                try {
+                    f = Float.parseFloat(amount);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    f = 0;
+                }
+                Entry entry = new Entry(i + 1, f);
+                values2.add(entry);
+            }
+        }
+
+
         Drawable[] drawables = {
                 ContextCompat.getDrawable(getActivity(), R.drawable.chart_thisyear_blue),
                 ContextCompat.getDrawable(getActivity(), R.drawable.chart_callserice_call_casecount)
