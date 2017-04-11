@@ -13,13 +13,17 @@ import android.view.ViewGroup;
 import com.barchart.mpchartdemo.entity.RealListEntity;
 import com.barchart.mpchartdemo.entity.YoyListEntity;
 import com.barchart.mpchartdemo.newchart.LineChartEntity;
+import com.barchart.mpchartdemo.newchart.PieChartEntity;
 import com.barchart.mpchartdemo.view.NewMarkerView;
 import com.barchart.mpchartdemo.view.StringUtils;
 import com.github.mikephil.chart_3_0_1v.charts.LineChart;
+import com.github.mikephil.chart_3_0_1v.charts.PieChart;
 import com.github.mikephil.chart_3_0_1v.components.AxisBase;
 import com.github.mikephil.chart_3_0_1v.components.Legend;
 import com.github.mikephil.chart_3_0_1v.data.Entry;
 import com.github.mikephil.chart_3_0_1v.data.LineDataSet;
+import com.github.mikephil.chart_3_0_1v.data.PieDataSet;
+import com.github.mikephil.chart_3_0_1v.data.PieEntry;
 import com.github.mikephil.chart_3_0_1v.formatter.IAxisValueFormatter;
 import com.github.mikephil.chart_3_0_1v.formatter.IValueFormatter;
 import com.github.mikephil.chart_3_0_1v.utils.ViewPortHandler;
@@ -53,6 +57,7 @@ public class NewFragment extends Fragment {
         mView = inflater.inflate(R.layout.fragment_new, container, false);
         test();
         initViews();
+        updatePieChart();
         return mView;
     }
 
@@ -154,6 +159,19 @@ public class NewFragment extends Fragment {
         String[] labels = new String[]{thisYear, lastYear};
         updateLinehart(yoyList, realList, lineChart, callDurationColors, drawables, "", values1, values2, labels);
     }
+
+    /**
+     * 双平滑曲线传入数据，添加markview，添加实体类单位
+     * @param yoyList
+     * @param realList
+     * @param lineChart
+     * @param colors
+     * @param drawables
+     * @param unit
+     * @param values2
+     * @param values1
+     * @param labels
+     */
     private void updateLinehart(final List<YoyListEntity> yoyList, final List<RealListEntity> realList, LineChart lineChart, int[] colors, Drawable[] drawables,
                                 final String unit, List<Entry> values2, List<Entry> values1, final String[] labels) {
         List<Entry>[] entries = new ArrayList[2];
@@ -231,6 +249,12 @@ public class NewFragment extends Fragment {
         lineChart.getData().setDrawValues(false);
     }
 
+    /**
+     * 双平滑曲线添加线下的阴影
+     * @param lineChartEntity
+     * @param drawables
+     * @param colors
+     */
     private void toggleFilled(LineChartEntity lineChartEntity, Drawable[] drawables, int[] colors) {
         if (android.os.Build.VERSION.SDK_INT >= 18) {
 
@@ -238,7 +262,35 @@ public class NewFragment extends Fragment {
         } else {
             lineChartEntity.toggleFilled(null, colors, true);
         }
+    }
 
+    /**
+     * 添加数据均匀饼装图
+     */
+    public void updatePieChart() {
+        int[] colors = {Color.parseColor("#faa74c"), Color.parseColor("#58D4C5"), Color.parseColor("#36a3eb"), Color.parseColor("#cc435f"), Color.parseColor("#f1ea56"),
+                Color.parseColor("#f49468"), Color.parseColor("#d5932c"), Color.parseColor("#34b5cc"), Color.parseColor("#8169c6"), Color.parseColor("#ca4561"),Color.parseColor("#fee335")};
+        ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
+        for(int i = 0 ;i <= 5; i++){
+            PieEntry pieEntry = new PieEntry(60,"项目" + i + "占比");
+            entries.add(pieEntry);
+        }
+
+        for(int i = 6 ;i <= 7; i++){
+            PieEntry pieEntry = new PieEntry(100,"项目" + i + "占比");
+            entries.add(pieEntry);
+        }
+
+        PieEntry pieEntry = new PieEntry(100,"项目8占比");
+        entries.add(pieEntry);
+
+        if (entries.size() != 0) {
+            PieChart new_pie_chart = (PieChart) mView.findViewById(R.id.new_pie_chart);
+            PieChartEntity pieChartEntity = new PieChartEntity(new_pie_chart, entries, new String[]{"", "", ""}, colors, 12f, Color.GRAY, PieDataSet.ValuePosition.OUTSIDE_SLICE);
+            pieChartEntity.setHoleEnabled(Color.TRANSPARENT, 40f, Color.TRANSPARENT, 40f);
+            pieChartEntity.setLegendEnabled(false);
+            pieChartEntity.setPercentValues(true);
+        }
     }
 
 }
