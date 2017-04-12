@@ -530,13 +530,21 @@ public class PieChartRenderer extends DataRenderer {
                         labelPty = pt2y;
                     }
 
-                    if (dataSet.getValueLineColor() != ColorTemplate.COLOR_NONE) {
-                        c.drawLine(pt0x, pt0y, pt1x, pt1y, mValueLinePaint);
-                        c.drawLine(pt1x, pt1y, pt2x, pt2y, mValueLinePaint);
+                    /**
+                     * 这里是绘制圈外线所以须添加
+                     */
+                    if (entry.isDisplay()) {
+                        if (dataSet.getValueLineColor() != ColorTemplate.COLOR_NONE) {
+                            c.drawLine(pt0x, pt0y, pt1x, pt1y, mValueLinePaint);
+                            c.drawLine(pt1x, pt1y, pt2x, pt2y, mValueLinePaint);
+                        }
                     }
 
+                    /**
+                     * 这里也相关
+                     */
                     // draw everything, depending on settings
-                    if (drawXOutside && drawYOutside) {
+                    if (drawXOutside && drawYOutside&&entry.isDisplay()) {
 
                         drawValue(c,
                                 formatter,
@@ -552,7 +560,10 @@ public class PieChartRenderer extends DataRenderer {
                         }
 
                     } else if (drawXOutside) {
-                        if (j < data.getEntryCount() && entry.getLabel() != null) {
+                        /**
+                         * 一样相关
+                         */
+                        if (j < data.getEntryCount() && entry.getLabel() != null&&entry.isDisplay()) {
                             drawEntryLabel(c, entry.getLabel(), labelPtx, labelPty + lineHeight / 2.f);
                         }
                     } else if (drawYOutside) {
@@ -570,7 +581,7 @@ public class PieChartRenderer extends DataRenderer {
                     mValuePaint.setTextAlign(Align.CENTER);
 
                     // draw everything, depending on settings
-                    if (drawXInside && drawYInside) {
+                    if (drawXInside && drawYInside&&entry.isDisplay()) {
 
                         drawValue(c, formatter, value, entry, 0, x, y, dataSet.getValueTextColor(j));
 

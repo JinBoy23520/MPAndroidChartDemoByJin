@@ -11,6 +11,11 @@ public class PieEntry extends Entry {
 
     private String label;
 
+    /**
+     * 用来标记是否显示描述文字
+     */
+    private boolean display = true;
+
     public PieEntry(float value) {
         super(0f, value);
     }
@@ -30,6 +35,17 @@ public class PieEntry extends Entry {
     }
 
     /**
+     * 当传数据过小，调用此方法不显示文字
+     * @param value
+     * @param label
+     * @param display
+     */
+    public PieEntry(float value ,String label,boolean display){
+        super(0f,value);
+        this.label = label;
+        this.display = display;
+    }
+    /**
      * This is the same as getY(). Returns the value of the PieEntry.
      *
      * @return
@@ -42,8 +58,24 @@ public class PieEntry extends Entry {
         return label;
     }
 
+    /**
+     * 文字绘制时用到做判断
+     * @return
+     */
+    public boolean isDisplay() {
+        return display;
+    }
+
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    /**
+     * 设置display值，达到控制是否显示文字
+     * @param display
+     */
+    public void setDisplay(boolean display) {
+        this.display = display;
     }
 
     @Deprecated
