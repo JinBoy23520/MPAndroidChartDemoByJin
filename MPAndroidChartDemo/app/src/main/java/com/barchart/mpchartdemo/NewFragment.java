@@ -58,6 +58,7 @@ public class NewFragment extends Fragment {
         test();
         initViews();
         updatePieChart();
+        updateThePieChart();
         return mView;
     }
 
@@ -291,6 +292,27 @@ public class NewFragment extends Fragment {
             pieChartEntity.setLegendEnabled(false);
             pieChartEntity.setPercentValues(true);
         }
+    }
+
+    /**
+     * 添加数据不均匀饼装图，避免文字重合
+     */
+    public void updateThePieChart(){
+        ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
+        PieChart new_the_pie_chart = (PieChart) mView.findViewById(R.id.new_the_pie_chart);
+        int[] colors = {Color.parseColor("#faa74c"), Color.parseColor("#58D4C5"), Color.parseColor("#36a3eb"), Color.parseColor("#cc435f"), Color.parseColor("#f1ea56"),
+                Color.parseColor("#f49468"), Color.parseColor("#d5932c"), Color.parseColor("#34b5cc"), Color.parseColor("#8169c6"), Color.parseColor("#ca4561"),Color.parseColor("#fee335")};
+
+        for(int i = 1 ;i <= 8; i++){
+            int all = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8;
+            PieEntry pieEntry = new PieEntry(i,"" ,i>3);
+            entries.add(pieEntry);
+        }
+
+        PieChartEntity pieChartEntity = new PieChartEntity(new_the_pie_chart, entries, new String[]{"", "", ""}, colors, 12f, Color.WHITE);
+        pieChartEntity.setHoleEnabled(Color.TRANSPARENT, 40f, Color.TRANSPARENT, 40f);
+        pieChartEntity.setLegendEnabled(false);
+        pieChartEntity.setPercentValues(true);
     }
 
 }

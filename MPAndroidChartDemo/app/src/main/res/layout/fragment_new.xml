@@ -36,6 +36,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="数据不正常饼状图："/>
+
+            <com.github.mikephil.chart_3_0_1v.charts.PieChart
+                android:id="@+id/new_the_pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
         </LinearLayout>
     </ScrollView>
 
