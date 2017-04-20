@@ -47,6 +47,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="无X轴柱状图（X轴分类字符在柱状图上显示）："/>
+
+            <com.github.mikephil.chart_3_0_1v.charts.BarChart
+                android:id="@+id/new_the_bar_chart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="X轴显示时间段的柱状图"/>
+
+            <com.github.mikephil.chart_3_0_1v.charts.BarChart
+                android:id="@+id/new_x_bar_chart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
         </LinearLayout>
     </ScrollView>
 

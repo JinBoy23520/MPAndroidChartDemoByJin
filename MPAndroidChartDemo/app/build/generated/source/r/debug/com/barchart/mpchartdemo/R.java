@@ -26,10 +26,13 @@ public final class R {
         public static final int tab_text_selector=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
-        public static final int barChart=0x7f080006;
-        public static final int lineChart=0x7f080007;
+        public static final int action_settings=0x7f08000b;
+        public static final int barChart=0x7f080009;
+        public static final int lineChart=0x7f08000a;
         public static final int new_lineChart=0x7f080005;
+        public static final int new_pie_chart=0x7f080006;
+        public static final int new_the_bar_chart=0x7f080008;
+        public static final int new_the_pie_chart=0x7f080007;
         public static final int pager=0x7f080003;
         public static final int rBtn_newTab=0x7f080002;
         public static final int rBtn_oldTab=0x7f080001;
@@ -47,22 +50,18 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060000;
-        public static final int app_name=0x7f060001;
-        public static final int hello_blank_fragment=0x7f060002;
-        public static final int hello_world=0x7f060003;
+        public static final int actual_value=0x7f060001;
+        public static final int app_name=0x7f060002;
+        public static final int budget_value=0x7f060003;
+        public static final int hello_blank_fragment=0x7f060004;
+        public static final int hello_world=0x7f060005;
+        public static final int yoy_value=0x7f060006;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
          */
         public static final int AppBaseTheme=0x7f050000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f050001;
         public static final int fans_tab_bottom_style=0x7f050002;
     }

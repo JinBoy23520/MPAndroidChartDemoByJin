@@ -1,5 +1,7 @@
 package com.barchart.mpchartdemo.newchart;
 
+import android.graphics.Color;
+
 import com.github.mikephil.chart_3_0_1v.charts.BarChart;
 import com.github.mikephil.chart_3_0_1v.charts.BarLineChartBase;
 import com.github.mikephil.chart_3_0_1v.data.BarData;
@@ -21,6 +23,24 @@ public class BarChartEntity extends BaseChartEntity<BarEntry> {
     }
 
     @Override
+    protected void initChart() {
+        super.initChart();
+
+        mChart.getAxisLeft().setDrawGridLines(true);
+        mChart.getAxisLeft().enableGridDashedLine(10f, 15f, 0f);
+        mChart.getAxisLeft().setGridLineWidth(0.5f);
+        mChart.getAxisLeft().setGridColor(Color.parseColor("#f5f5f5"));
+        mChart.getAxisLeft().setDrawZeroLine(false);
+        mChart.getAxisRight().setDrawZeroLine(false);
+        mChart.getAxisRight().setZeroLineWidth(0f);
+        mChart.getAxisLeft().setZeroLineWidth(0f);
+        mChart.getAxisLeft().setDrawAxisLine(false);
+        mChart.getXAxis().setDrawAxisLine(false);
+        mChart.getXAxis().setAxisMinimum(0);
+
+    }
+
+    @Override
     protected void setChartData() {
 
         BarDataSet barDataSet;
@@ -30,8 +50,13 @@ public class BarChartEntity extends BaseChartEntity<BarEntry> {
             mChart.getData().notifyDataChanged();
             mChart.notifyDataSetChanged();
         } else {
-            barDataSet = new BarDataSet(mEntries[0], labels[0]);
+            barDataSet = new BarDataSet(mEntries[0], labels == null ? "" : labels[0]);
             barDataSet.setColors(mChartColors);
+            List<Integer> colors = new ArrayList<>();
+            for (int color : mChartColors) {
+                colors.add(color);
+            }
+            barDataSet.setValueTextColors(colors);
 
             ArrayList<IBarDataSet> dataSets = new ArrayList<>();
             dataSets.add(barDataSet);

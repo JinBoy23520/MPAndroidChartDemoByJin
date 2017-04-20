@@ -6,6 +6,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
+import android.text.Layout;
+import android.text.StaticLayout;
+import android.text.TextPaint;
 
 import com.github.mikephil.chart_3_0_1v.animation.ChartAnimator;
 import com.github.mikephil.chart_3_0_1v.data.Entry;
@@ -147,7 +150,23 @@ public abstract class DataRenderer extends Renderer {
      */
     public void drawValue(Canvas c, IValueFormatter formatter, float value, Entry entry, int dataSetIndex, float x, float y, int color) {
         mValuePaint.setColor(color);
-        c.drawText(formatter.getFormattedValue(value, entry, dataSetIndex, mViewPortHandler), x, y, mValuePaint);
+        //回车换行符处理
+
+        TextPaint textPaint = new TextPaint();
+        textPaint.setColor(mValuePaint.getColor());
+        textPaint.setTextSize(mValuePaint.getTextSize());
+        textPaint.setAntiAlias(true);
+        String valueTemp = formatter.getFormattedValue(value, entry, dataSetIndex, mViewPortHandler);
+
+        StaticLayout myStaticLayout = new StaticLayout(valueTemp, 0, valueTemp.length(), textPaint,
+                (int)textPaint.measureText(valueTemp), Layout.Alignment.ALIGN_CENTER, 1.0f, 0.0f, false);
+        c.save();
+
+        c.translate(x - myStaticLayout.getWidth() / 2, y - myStaticLayout.getHeight()); //开始画位置
+        myStaticLayout.draw(c);
+        c.restore();
+
+//        c.drawText(formatter.getFormattedValue(value, entry, dataSetIndex, mViewPortHandler), x, y, mValuePaint);
     }
 
     /**

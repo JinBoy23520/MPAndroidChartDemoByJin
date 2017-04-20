@@ -8,4 +8,8 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="actual_value">实际数</string>
+    <string name="budget_value">预算数</string>
+    <string name="yoy_value">同比数</string>
+
 </resources>

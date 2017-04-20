@@ -23,13 +23,11 @@ public class PieChartEntity  {
     private int[] mPieColors;
     private int mValueColor;
     private float mTextSize;
-
     private PieDataSet.ValuePosition mValuePosition;
 
 
     public PieChartEntity(PieChart chart, List<PieEntry> entries, String[] labels,
                           int []chartColor,  float textSize, int valueColor, PieDataSet.ValuePosition valuePosition) {
-
         this.mChart = chart;
         this.mEntries = entries;
         this.labels= labels;
@@ -43,25 +41,19 @@ public class PieChartEntity  {
     public PieChartEntity(PieChart chart, List<PieEntry> entries, String[] labels,
                           int []chartColor,  float textSize, int valueColor) {
         this(chart, entries, labels, chartColor, textSize, valueColor, PieDataSet.ValuePosition.INSIDE_SLICE);
-
     }
 
     private void initPieChart() {
         mChart.setExtraOffsets(5, 10, 5, 5);
-
         mChart.setDragDecelerationFrictionCoef(0.95f);
         mChart.setDrawCenterText(false);
-
         mChart.getDescription().setEnabled(false);
-
         mChart.setRotationAngle(0);
         // enable rotation of the chart by touch
         mChart.setRotationEnabled(true);
         mChart.setHighlightPerTapEnabled(true);
-
         mChart.setDrawEntryLabels(true);
         setChartData();
-
         mChart.animateY(1000, Easing.EasingOption.EaseInOutQuad);
 
         Legend l = mChart.getLegend();
@@ -72,11 +64,8 @@ public class PieChartEntity  {
         l.setXEntrySpace(7f);
         l.setYEntrySpace(1f);
         l.setYOffset(0f);
-
-
         // entry label styling
         mChart.setEntryLabelColor(mValueColor);
-
         mChart.setEntryLabelTextSize(mTextSize);
         mChart.setExtraOffsets(10, 10, 10, 10);
     }
@@ -95,10 +84,8 @@ public class PieChartEntity  {
     public void setHoleEnabled (int holeColor, float holeRadius, int transColor, float transRadius) {
         mChart.setDrawHoleEnabled(true);
         mChart.setHoleColor(holeColor);
-
         mChart.setTransparentCircleColor(transColor);
         mChart.setTransparentCircleAlpha(110);
-
         mChart.setHoleRadius(holeRadius);
         mChart.setTransparentCircleRadius(transRadius);
     }
@@ -109,15 +96,12 @@ public class PieChartEntity  {
         dataSet.setSliceSpace(0f);
         dataSet.setSelectionShift(5f);
 //        dataSet.setEntryLabelsColor(mValueColor);
-
         dataSet.setColors(mPieColors);
         //dataSet.setSelectionShift(0f);
-
         dataSet.setYValuePosition(mValuePosition);
         dataSet.setXValuePosition(mValuePosition);
         dataSet.setValueLineColor(mValueColor);
         dataSet.setSelectionShift(15f);
-
         dataSet.setValueLinePart1Length(0.6f);
         dataSet.setValueLineColor(mValueColor);
         PieData data = new PieData(dataSet);
@@ -125,12 +109,9 @@ public class PieChartEntity  {
         data.setValueTextSize(mTextSize);
         data.setValueTextColor(mValueColor);
         data.setValueTextColor(mValueColor);
-
         mChart.setData(data);
-
         // undo all highlights
         mChart.highlightValues(null);
-
         mChart.invalidate();
     }
 
