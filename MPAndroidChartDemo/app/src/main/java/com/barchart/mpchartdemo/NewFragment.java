@@ -396,6 +396,7 @@ public class NewFragment extends Fragment {
         }
         float deltaMin = yMin / 5.0f;
         mBarChart.getAxisLeft().setAxisMinimum(yMin - deltaMin);
+        
     }
 
 }
