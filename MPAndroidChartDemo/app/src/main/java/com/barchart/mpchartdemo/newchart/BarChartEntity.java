@@ -25,7 +25,6 @@ public class BarChartEntity extends BaseChartEntity<BarEntry> {
     @Override
     protected void initChart() {
         super.initChart();
-
         mChart.getAxisLeft().setDrawGridLines(true);
         mChart.getAxisLeft().enableGridDashedLine(10f, 15f, 0f);
         mChart.getAxisLeft().setGridLineWidth(0.5f);
@@ -42,7 +41,6 @@ public class BarChartEntity extends BaseChartEntity<BarEntry> {
 
     @Override
     protected void setChartData() {
-
         BarDataSet barDataSet;
         if (mChart.getData() != null && mChart.getData().getDataSetCount() > 0) {
             barDataSet = (BarDataSet) mChart.getData().getDataSetByIndex(0);
@@ -57,15 +55,11 @@ public class BarChartEntity extends BaseChartEntity<BarEntry> {
                 colors.add(color);
             }
             barDataSet.setValueTextColors(colors);
-
             ArrayList<IBarDataSet> dataSets = new ArrayList<>();
             dataSets.add(barDataSet);
-
             BarData data = new BarData(dataSets);
             data.setValueTextSize(mTextSize);
-
             data.setBarWidth(0.9f);
-
             mChart.setData(data);
         }
     }

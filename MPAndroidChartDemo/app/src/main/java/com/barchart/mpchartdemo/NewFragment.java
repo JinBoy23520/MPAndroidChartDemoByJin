@@ -406,7 +406,9 @@ public class NewFragment extends Fragment {
         mBarChart.getAxisLeft().setAxisMinimum(yMin - deltaMin);
     }
 
-
+    /**
+     * X轴显示时间段的柱状图
+     */
     public void updataXBarChart(){
         final MonthItemEntity entity = new MonthItemEntity();
         xBarChart = (BarChart) mView.findViewById(R.id.new_x_bar_chart);
@@ -415,17 +417,13 @@ public class NewFragment extends Fragment {
         final float[] xlabels = new float[entity.getMonthDatas().size()];
         int[] color ={Color.parseColor("#7f45a2ff")};
         final String unit = "%";
-
         //x轴坐标增量
         float delta = 1;
 
         for (int index = 0, len = entity.getMonthDatas().size(); index < len; index ++) {
             xlabels[index] = index * delta + delta;
         }
-
         entries[0] = entity.getMonthEntries();
-
-
         BarChartEntity barChartEntity = new BarChartEntity(xBarChart, entries, null, color, Color.parseColor("#999999"), 10f);
         /*属性修改设置*/
         barChartEntity.setBarWidth(0.55f);
@@ -435,9 +433,7 @@ public class NewFragment extends Fragment {
         xBarChart.getLegend().setEnabled(false);
         xBarChart.getXAxis().setTextSize(9f);
         xBarChart.getAxisLeft().setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART);
-
         mBarChart.animateY(1000, Easing.EasingOption.EaseInOutQuart);
-
         /*X,Y坐标显示设置*/
         barChartEntity.setAxisFormatter(new IAxisValueFormatter() {
             @Override
@@ -452,7 +448,6 @@ public class NewFragment extends Fragment {
         }, new IAxisValueFormatter() {
             @Override
             public String getFormattedValue(float value, AxisBase axis) {
-
                 return mFormat.format(value) + (unit.equals("%") ? unit : "");
             }
         });
@@ -464,7 +459,6 @@ public class NewFragment extends Fragment {
                 return mFormat.format(value) + (unit.equals("%") ? unit : "");
             }
         });
-
 
         /*Y轴最大值最小值设置，为了尽可能的显示完整数据*/
         float yMax = xBarChart.getData().getYMax() == 0 ? 100f :xBarChart.getData().getYMax();
@@ -478,5 +472,4 @@ public class NewFragment extends Fragment {
         float deltaMin = yMin / 5.0f;
         xBarChart.getAxisLeft().setAxisMinimum(yMin - deltaMin);
     }
-
 }

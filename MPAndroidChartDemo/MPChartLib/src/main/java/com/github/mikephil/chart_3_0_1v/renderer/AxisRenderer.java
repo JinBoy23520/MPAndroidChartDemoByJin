@@ -170,7 +170,7 @@ public abstract class AxisRenderer extends Renderer {
         if (interval == 0) {
             interval +=1;
         }
-        
+
         // If granularity is enabled, then do not allow the interval to go below specified granularity.
         // This is used to avoid repeated values when rounding values for display.
         if (mAxis.isGranularityEnabled())
