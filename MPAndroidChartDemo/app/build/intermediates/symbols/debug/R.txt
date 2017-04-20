@@ -9,13 +9,14 @@ int drawable chart_view_selector_line 0x7f020005
 int drawable ic_launcher 0x7f020006
 int drawable line_bg_pressed 0x7f020007
 int drawable tab_text_selector 0x7f020008
-int id action_settings 0x7f08000b
-int id barChart 0x7f080009
-int id lineChart 0x7f08000a
+int id action_settings 0x7f08000c
+int id barChart 0x7f08000a
+int id lineChart 0x7f08000b
 int id new_lineChart 0x7f080005
 int id new_pie_chart 0x7f080006
 int id new_the_bar_chart 0x7f080008
 int id new_the_pie_chart 0x7f080007
+int id new_x_bar_chart 0x7f080009
 int id pager 0x7f080003
 int id rBtn_newTab 0x7f080002
 int id rBtn_oldTab 0x7f080001

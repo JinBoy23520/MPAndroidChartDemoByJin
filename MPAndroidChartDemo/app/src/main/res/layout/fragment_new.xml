@@ -67,6 +67,7 @@
             <com.github.mikephil.chart_3_0_1v.charts.BarChart
                 android:id="@+id/new_x_bar_chart"
                 android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
                 android:layout_height="250dp" />
         </LinearLayout>
     </ScrollView>

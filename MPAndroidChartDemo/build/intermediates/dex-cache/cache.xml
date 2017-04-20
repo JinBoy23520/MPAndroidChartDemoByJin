@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="4237bc126b4c0d010003b7b6b75a75b6d1f10ed1">
+        sha1="8b559be59fafba65cc3d8a9554e8ee60492fffb6">
         <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8e195b93eff12d41352578534840d507f1639a0f\classes.dex" />
     </item>
     <item
@@ -124,7 +124,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="40e6335fab74d5fc8c376daed4a10275460d62c5">
+        sha1="7c8fb0df4a5030128dd4c81ab19681f1b54b7a5d">
         <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0177194e1af02c31cce292a1815d257a145a1370\classes.dex" />
     </item>
     <item

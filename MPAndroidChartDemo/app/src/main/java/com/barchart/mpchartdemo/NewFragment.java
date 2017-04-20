@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.barchart.mpchartdemo.entity.MonthItemEntity;
 import com.barchart.mpchartdemo.entity.RealListEntity;
 import com.barchart.mpchartdemo.entity.YoyListEntity;
 import com.barchart.mpchartdemo.newchart.BarChartEntity;
@@ -23,6 +24,7 @@ import com.github.mikephil.chart_3_0_1v.charts.LineChart;
 import com.github.mikephil.chart_3_0_1v.charts.PieChart;
 import com.github.mikephil.chart_3_0_1v.components.AxisBase;
 import com.github.mikephil.chart_3_0_1v.components.Legend;
+import com.github.mikephil.chart_3_0_1v.components.YAxis;
 import com.github.mikephil.chart_3_0_1v.data.BarEntry;
 import com.github.mikephil.chart_3_0_1v.data.Entry;
 import com.github.mikephil.chart_3_0_1v.data.LineDataSet;
@@ -48,7 +50,7 @@ import java.util.List;
 public class NewFragment extends Fragment {
     private View mView;
     private LineChart lineChart;
-    private BarChart mBarChart;
+    private BarChart mBarChart, xBarChart;
 
     private List<RealListEntity> realList;
     private List<YoyListEntity> yoyList;
@@ -66,6 +68,7 @@ public class NewFragment extends Fragment {
         updatePieChart();
         updateThePieChart();
         updataBarChart();
+        updataXBarChart();
         return mView;
     }
 
@@ -328,6 +331,9 @@ public class NewFragment extends Fragment {
         pieChartEntity.setPercentValues(true);
     }
 
+    /**
+     * 柱状图 该在X轴得文字显示在柱状图上
+     */
     private void updataBarChart() {
         mBarChart = (BarChart) mView.findViewById(R.id.new_the_bar_chart);
         List<BarEntry>[] entries = new ArrayList[3];
@@ -349,13 +355,9 @@ public class NewFragment extends Fragment {
         entries1.add(new BarEntry(1.3f, budgetValue));
         entries1.add(new BarEntry(2.1f, yoyValue));
 
-
         values[0] = actualValue;
-
         values[1] = budgetValue;
-
         values[2] = yoyValue;
-
         entries[0] = entries1;
 
         if (mBarChart.getData() != null) {
@@ -376,6 +378,10 @@ public class NewFragment extends Fragment {
         }, null);
 
         mBarChart.getLegend().setEnabled(false);
+
+        /**
+         * 拼接柱状图上文字，涉及到修改源码
+         */
         mBarChart.getData().setValueFormatter(new IValueFormatter() {
             @Override
             public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
@@ -385,7 +391,9 @@ public class NewFragment extends Fragment {
             }
         });
 
-
+        /**
+         * 处理当数据都为0，不好看情况
+         */
         float yMax = mBarChart.getData().getYMax() == 0 ? 100f : mBarChart.getData().getYMax();
         float delta = yMax / 5.5f;
         mBarChart.getAxisLeft().setAxisMaximum(yMax + delta);
@@ -396,7 +404,79 @@ public class NewFragment extends Fragment {
         }
         float deltaMin = yMin / 5.0f;
         mBarChart.getAxisLeft().setAxisMinimum(yMin - deltaMin);
-        
+    }
+
+
+    public void updataXBarChart(){
+        final MonthItemEntity entity = new MonthItemEntity();
+        xBarChart = (BarChart) mView.findViewById(R.id.new_x_bar_chart);
+        List<BarEntry>[]entries = new ArrayList[1];
+        //x轴坐标 控制显示位置，并不会在X轴上显示具体的值
+        final float[] xlabels = new float[entity.getMonthDatas().size()];
+        int[] color ={Color.parseColor("#7f45a2ff")};
+        final String unit = "%";
+
+        //x轴坐标增量
+        float delta = 1;
+
+        for (int index = 0, len = entity.getMonthDatas().size(); index < len; index ++) {
+            xlabels[index] = index * delta + delta;
+        }
+
+        entries[0] = entity.getMonthEntries();
+
+
+        BarChartEntity barChartEntity = new BarChartEntity(xBarChart, entries, null, color, Color.parseColor("#999999"), 10f);
+        /*属性修改设置*/
+        barChartEntity.setBarWidth(0.55f);
+        barChartEntity.setDrawValueAboveBar(true);
+        xBarChart.setPinchZoom(false);
+        xBarChart.setScaleEnabled(false);
+        xBarChart.getLegend().setEnabled(false);
+        xBarChart.getXAxis().setTextSize(9f);
+        xBarChart.getAxisLeft().setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART);
+
+        mBarChart.animateY(1000, Easing.EasingOption.EaseInOutQuart);
+
+        /*X,Y坐标显示设置*/
+        barChartEntity.setAxisFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                for (int index = 0,len = xlabels.length; index < len; index ++) {
+                    if (value == xlabels[index]) {
+                        return entity.getMonthDatas().get(index).getBeginTime() + "-" + entity.getMonthDatas().get(index).getEndTime();
+                    }
+                }
+                return "";
+            }
+        }, new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+
+                return mFormat.format(value) + (unit.equals("%") ? unit : "");
+            }
+        });
+
+        /*值显示设置*/
+        xBarChart.getData().setValueFormatter(new IValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                return mFormat.format(value) + (unit.equals("%") ? unit : "");
+            }
+        });
+
+
+        /*Y轴最大值最小值设置，为了尽可能的显示完整数据*/
+        float yMax = xBarChart.getData().getYMax() == 0 ? 100f :xBarChart.getData().getYMax();
+        float yDelta = yMax / 5.5f;
+        float axisMaximum = yMax + yDelta;
+        if (axisMaximum < 5) {
+            axisMaximum = 5;
+        }
+        xBarChart.getAxisLeft().setAxisMaximum(axisMaximum);
+        float yMin = xBarChart.getData().getYMin();
+        float deltaMin = yMin / 5.0f;
+        xBarChart.getAxisLeft().setAxisMinimum(yMin - deltaMin);
     }
 
 }
