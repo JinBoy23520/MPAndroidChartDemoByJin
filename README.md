@@ -19,3 +19,6 @@ MPAndroidChart项目实战Demo
 <br>
 [MPAndroidChart项目实战（四）——柱状图实现及X轴文字不显示问题和柱状图上显示文字](http://blog.csdn.net/dt235201314/article/details/70237777 "鼠标悬停显示")
 <br>
+<br>
+[MPAndroidChart X轴文字斜着显示](http://blog.csdn.net/dt235201314/article/details/73648073 "鼠标悬停显示")
+<br>
