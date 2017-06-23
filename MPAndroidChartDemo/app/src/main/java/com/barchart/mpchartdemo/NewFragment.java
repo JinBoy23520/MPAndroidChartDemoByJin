@@ -471,5 +471,9 @@ public class NewFragment extends Fragment {
         float yMin = xBarChart.getData().getYMin();
         float deltaMin = yMin / 5.0f;
         xBarChart.getAxisLeft().setAxisMinimum(yMin - deltaMin);
+        /**
+         * 设置X轴文字顺时针旋转角度
+         */
+        xBarChart.getXAxis().setLabelRotationAngle(-60);
     }
 }
