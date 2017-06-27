@@ -2,7 +2,7 @@
 MPAndroidChart项目实战Demo
 记录开发中遇到的问题和实现的效果
 <br>
-![image]https://github.com/JinBoy23520/MPAndroidChartDemoByJin/blob/master/20170412144122046.gifwatermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRFQyMzUyMDEzMTQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center?
+![image](https://github.com/JinBoy23520/MPAndroidChartDemoByJin/blob/master/20170412144122046.gif )   
 <br>
 <br>
 [MPAndroidChart常见设置属性（一）——应用层](http://blog.csdn.net/dt235201314/article/details/52222088 "鼠标悬停显示")
