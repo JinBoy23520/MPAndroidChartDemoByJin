@@ -17,8 +17,8 @@ ADDED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidMan
 		ADDED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidManifest.xml:7:5-9:41
-MERGED from [MPAndroidChartDemo:MPChartLib:unspecified] D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\exploded-aar\MPAndroidChartDemo\MPChartLib\unspecified\AndroidManifest.xml:17:5-19:41
-MERGED from [com.android.support:support-v4:21.0.3] D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:15:5-42
+MERGED from [MPAndroidChartDemo:MPChartLib:unspecified] D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\MPChartLib\build\intermediates\bundles\default\AndroidManifest.xml:17:5-19:41
+MERGED from [com.android.support:support-v4:21.0.3] C:\Users\Administrator\.android\build-cache\b284f367f346d8d9a37e227fddcab9c7ed12816e\output\AndroidManifest.xml:15:5-42
 	android:targetSdkVersion
 		ADDED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidManifest.xml
@@ -29,7 +29,7 @@ MERGED from [com.android.support:support-v4:21.0.3] D:\MPAndroidChartDemoByJin\M
 		INJECTED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidManifest.xml
 application
 ADDED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidManifest.xml:11:5-25:19
-MERGED from [com.android.support:support-v4:21.0.3] D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:16:5-19
+MERGED from [com.android.support:support-v4:21.0.3] C:\Users\Administrator\.android\build-cache\b284f367f346d8d9a37e227fddcab9c7ed12816e\output\AndroidManifest.xml:16:5-19
 	android:label
 		ADDED from D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\src\main\AndroidManifest.xml:14:9-41
 	android:allowBackup
