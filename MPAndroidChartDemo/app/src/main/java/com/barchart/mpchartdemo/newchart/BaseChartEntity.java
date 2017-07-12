@@ -27,6 +27,9 @@ public abstract class BaseChartEntity<T extends Entry> {
     protected float mTextSize;
     protected int mValueColor;
 
+    /*为true表示需要设置成虚线*/
+    protected boolean[] hasDotted;
+
 
     protected BaseChartEntity(BarLineChartBase chart, List<T> []entries, String[] labels,
                               int []chartColor, int valueColor, float textSize) {
@@ -37,6 +40,19 @@ public abstract class BaseChartEntity<T extends Entry> {
         this.mChartColors = chartColor;
 //        this.mTextSize = textSize;
         this.mTextSize = 11f;
+        initChart();
+    }
+
+    protected BaseChartEntity(BarLineChartBase chart, List<T> []entries, String[] labels,
+                              int []chartColor, int valueColor, float textSize,boolean[] hasDotted) {
+        this.mChart = chart;
+        this.mEntries = entries;
+        this.labels = labels;
+        this.mValueColor = valueColor;
+        this.mChartColors = chartColor;
+        this.mTextSize = textSize;
+//        this.mTextSize = 11f;
+        this.hasDotted = hasDotted;
         initChart();
     }
 

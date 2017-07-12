@@ -14,13 +14,50 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:visibility="visible"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@mipmap/tv_top_arrow_tcl"
+                    android:drawablePadding="3dp"
+                    android:gravity="right|center_vertical"
+                    android:text="TCL"
+                    android:textColor="@color/black99"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@mipmap/tv_top_arrow_trend"
+                    android:drawablePadding="3dp"
+                    android:gravity="right|center_vertical"
+                    android:text="趋势线"
+                    android:textColor="@color/black99"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <com.barchart.mpchartdemo.view.LineChartInViewPager
+                android:id="@+id/trend_lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="对比型平滑曲线："/>
 
-            <com.github.mikephil.chart_3_0_1v.charts.LineChart
+            <com.barchart.mpchartdemo.view.LineChartInViewPager
                 android:id="@+id/new_lineChart"
                 android:layout_width="match_parent"
                 android:layout_height="250dp" />
@@ -40,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="数据不正常饼状图："/>
+                android:text="数据不正常饼状图：（小于5%不显示）"/>
 
             <com.github.mikephil.chart_3_0_1v.charts.PieChart
                 android:id="@+id/new_the_pie_chart"
@@ -69,6 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginBottom="20dp"
                 android:layout_height="250dp" />
+
         </LinearLayout>
     </ScrollView>
 

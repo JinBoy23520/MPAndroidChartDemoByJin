@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorAccent">@color/blue_bg</color>
+    <color name="greenLight">#1af10f</color>
+    <color name="blue_bg">#45a2ff</color>
+    <color name="blueLight">#7eb3ff</color>
+    <color name="blueLight2">#40a0ff</color>
+    <color name="blueLight1">#2e74ba</color>
+    <color name="btn_cm_bg_pressed">#eaeff4</color>
+    <color name="withe">#ffffff</color>
+    <color name="tv_cm_textColor">#5e5e5d</color>
+    <color name="gray1">#c1bdbd</color>
+    <color name="tab_text_selected">#ffffff</color>
+    <color name="whole_back">#eeeef0</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="text_color">#666666</color>
+    <color name="title_bottom_line">#dfdfdf</color>
+    <color name="bg_loading">#f0f0f3</color>
+
+    <color name="color_channel_pressed">#f2f2f2</color>
+    <color name="text_33">#3B3B3B</color>
+    <color name="color_mine_line">#eeeef0</color>
+    <color name="black5e">#5e5e5d</color>
+    <color name="black33">#333333</color>
+    <color name="black66">#666666</color>
+    <color name="black99">#999999</color>
+    <color name="gray2">#f7868686</color>
+    <color name="gray3">#cccccc</color>
+    <color name="gray4">#999999</color>
+
+    <color name="view1_bg">#d2d2d2</color>
+    <color name="view2_bg">#eeeeee</color>
+    <color name="view3_bg">#f2f2f2</color>
+    <color name="view4_bg">#f5f5f5</color>
+
+    <color name="Layout_bg1">#F0F0F0</color>
+    <color name="Layout_bg2">#fafafa</color>
+    <color name="eeeeee">#eeeeee</color>
+    <color name="title_colcor">#F9F9F9</color>
+    <color name="backColorTransparent">#00363a53</color>
+
+    <!--用户权限概览页面，每个模块的颜色值-->
+
+    <!--用户权限概览页面，每个模块左边的颜色值-->
+
+    <!--wheel 的颜色值-->
+    <color name="whell_item_bg_select">#efefef</color>
+
+    <!--财务模块-->
+    <color name="financeTabBg">#f1f1f1</color>
+    <color name="financeBCNet">#ebfeff</color>
+    <color name="financeAll">#fdffe8</color>
+    <color name="financeLow80">#F03967</color>
+    <color name="financeGreat100">#12CD7C</color>
+    <color name="financeG80L100">#FAF038</color>
+    <color name="financeItemBg">#fafafa</color>
+
+    <color name="six18_red">#FF414E</color>
+    <color name="six18_cell_bg">#FFF5E0</color>
+</resources>

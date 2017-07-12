@@ -27,10 +27,18 @@ public class NewMarkerView extends MarkerView {
 
     private TextView tvContent;
     private CallBack mCallBack;
+    private Boolean needFormat=true;
 
     public NewMarkerView(Context context, int layoutResource) {
         super(context, layoutResource);
 
+        tvContent = (TextView) findViewById(R.id.tvContent);
+    }
+
+    /*部分数据不需要格式化处理*/
+    public NewMarkerView(Context context, int layoutResource,boolean needFormat) {
+        super(context, layoutResource);
+        this.needFormat = needFormat;
         tvContent = (TextView) findViewById(R.id.tvContent);
     }
 
@@ -44,7 +52,11 @@ public class NewMarkerView extends MarkerView {
             CandleEntry ce = (CandleEntry) e;
             values = "" + Utils.formatNumber(ce.getHigh(), 0, true);
         } else {
-            values = "" + Utils.formatNumber(e.getY(), 0, true);
+            if(!needFormat){
+                values=""+e.getY();
+            }else{
+                values = "" + Utils.formatNumber(e.getY(), 0, true);
+            }
         }
 
         if (mCallBack != null) {

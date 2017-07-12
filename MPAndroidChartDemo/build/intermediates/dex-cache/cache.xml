@@ -3,12 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jar="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.3"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-21.0.3_e0ce5c889f5185c7b20fbcd1899d5379004d5132\classes.dex" />
+        revision="25.0.0"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_0177194e1af02c31cce292a1815d257a145a1370\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -30,21 +30,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.3_84b7771fb1de4dfbb503bce96502d28de3f5aaca\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="F:\MPAndroidChartDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
         <dex dex="F:\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.3_f8e8db3b88cda2e6f318a02a3d579d1dc46b795b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="62acb86fbf0104416642c7a57b24aeb876a83ad0">
+        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_8e195b93eff12d41352578534840d507f1639a0f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -84,6 +84,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Administrator\.android\build-cache\b284f367f346d8d9a37e227fddcab9c7ed12816e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_712470d726ed126d74ac548a1ce34dd7e8603056\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\MPAndroidChartDemo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -111,21 +120,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Administrator\.android\build-cache\b284f367f346d8d9a37e227fddcab9c7ed12816e\output\jars\libs\internal_impl-21.0.3.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.3"
-        sha1="91d55697542ea8fa92baba1ca49e7b0b80094b7e">
-        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8e195b93eff12d41352578534840d507f1639a0f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6c58661cd6a1a0d708b4562e404f121172f3cc7a">
-        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0177194e1af02c31cce292a1815d257a145a1370\classes.dex" />
+        revision="25.0.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.3_62d31fc5d1b14525dc0dee3377db0adace933810\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -135,6 +135,15 @@
         revision="23.0.3"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
         <dex dex="F:\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-21.0.3_1cf668b68a1134390cda3f55cc4a0f62e3f89fb7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\libs\mpandroidchartlibrary-2-1-3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f58cc07df07ce418ae9b0336659ee1a69dd21fb3">
+        <dex dex="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\transforms\dex\debug\folders\1000\2\mpandroidchartlibrary-2-1-3_6f6ed358d36b9e76f99a932ef4b733e98df5cbd6\classes.dex" />
     </item>
     <item
         is-multidex="true"

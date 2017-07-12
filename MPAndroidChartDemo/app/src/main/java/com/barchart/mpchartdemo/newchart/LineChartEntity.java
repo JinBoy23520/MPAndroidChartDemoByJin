@@ -3,6 +3,7 @@ package com.barchart.mpchartdemo.newchart;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 
+import com.barchart.mpchartdemo.R;
 import com.github.mikephil.chart_3_0_1v.animation.Easing;
 import com.github.mikephil.chart_3_0_1v.charts.LineChart;
 import com.github.mikephil.chart_3_0_1v.components.YAxis;
@@ -25,6 +26,12 @@ public class LineChartEntity extends BaseChartEntity<Entry> {
     public LineChartEntity (LineChart lineChart, List<Entry> []entries, String[] labels,
                              int []chartColor, int valueColor, float textSize) {
         super(lineChart, entries, labels, chartColor, valueColor, textSize);
+    }
+
+    public LineChartEntity (LineChart lineChart, List<Entry> []entries, String[] labels,boolean[] hasDotted,
+                            int []chartColor, int valueColor, float textSize) {
+        super(lineChart, entries, labels, chartColor, valueColor, textSize,hasDotted);
+        this.hasDotted = hasDotted;
     }
 
 
@@ -72,6 +79,12 @@ public class LineChartEntity extends BaseChartEntity<Entry> {
                     lineDataSet[index].setDrawCircleHole(false);
                     lineDataSet[index].setValueTextColor(mChartColors[index]);
 //                    lineDataSet[index].setFillColor(ColorTemplate.colorWithAlpha(Color.YELLOW, 200));
+                    if (hasDotted!=null&&hasDotted[index]) {
+                        lineDataSet[index].setDrawCircles(false);
+                        lineDataSet[index].setCircleColor(R.color.white);
+                        lineDataSet[index].enableDashedLine(10f, 15f, 0f);
+                        lineDataSet[index].enableDashedHighlightLine(10f, 15f, 0f);
+                    }
 
                 }
                 // create a data object with the datasets
@@ -129,6 +142,21 @@ public class LineChartEntity extends BaseChartEntity<Entry> {
         for (ILineDataSet iSet : sets) {
             LineDataSet set = (LineDataSet) iSet;
             set.setMode(mode);
+        }
+        mChart.invalidate();
+    }
+
+    /**
+     * 设置图表颜色值,组合图
+     * @param modes LineDataSet.Mode
+     */
+    public void setLineMode (LineDataSet.Mode[] modes) {
+        List<ILineDataSet> sets = ((LineChart)mChart).getData().getDataSets();
+        for (int index = 0, len = sets.size(); index < len; index ++) {
+            LineDataSet set = (LineDataSet) sets.get(index);
+            if (index < modes.length) {
+                set.setMode(modes[index]);
+            }
         }
         mChart.invalidate();
     }

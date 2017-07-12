@@ -6,9 +6,11 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 
 import com.barchart.mpchartdemo.entity.MonthItemEntity;
 import com.barchart.mpchartdemo.entity.RealListEntity;
@@ -16,6 +18,7 @@ import com.barchart.mpchartdemo.entity.YoyListEntity;
 import com.barchart.mpchartdemo.newchart.BarChartEntity;
 import com.barchart.mpchartdemo.newchart.LineChartEntity;
 import com.barchart.mpchartdemo.newchart.PieChartEntity;
+import com.barchart.mpchartdemo.view.LineChartInViewPager;
 import com.barchart.mpchartdemo.view.NewMarkerView;
 import com.barchart.mpchartdemo.view.StringUtils;
 import com.github.mikephil.chart_3_0_1v.animation.Easing;
@@ -38,6 +41,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,26 +53,33 @@ import java.util.List;
  */
 public class NewFragment extends Fragment {
     private View mView;
-    private LineChart lineChart;
+    private LineChartInViewPager lineChart;
     private BarChart mBarChart, xBarChart;
 
     private List<RealListEntity> realList;
     private List<YoyListEntity> yoyList;
-    private List<Entry> values1, values2;
+
+    private List<Entry> values1, values2,dottedLineData,solidLineData;
+    private List<String> dataList;
     private RealListEntity realListEntity;
     private YoyListEntity yoyListEntity;
     private DecimalFormat mFormat;
+    private float maxData = 0;
+    private LineChartInViewPager lineCharts;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_new, container, false);
+
+        getData();
         test();
+        mView = inflater.inflate(R.layout.fragment_new, container, false);
         initViews();
         updatePieChart();
         updateThePieChart();
         updataBarChart();
         updataXBarChart();
+        updataLineharts();
         return mView;
     }
 
@@ -76,8 +87,22 @@ public class NewFragment extends Fragment {
      * 下面json转实体类
      */
     public void test() {
-        String data = "{\"realList\":[{\"amount\":\"3740\",\"month\":\"1\",\"year\":\"2017\"},{\"amount\":\"2382\",\"month\":\"2\",\"year\":\"2017\"},{\"amount\":\"3329\",\"month\":\"3\",\"year\":\"2017\"},{\"amount\":\"463\",\"month\":\"4\",\"year\":\"2017\"}],\n" +
-                "\"yoyList\":[{\"amount\":\"4571\",\"month\":\"1\",\"year\":\"2016\"},{\"amount\":\"1630\",\"month\":\"2\",\"year\":\"2016\"},{\"amount\":\"2589\",\"month\":\"3\",\"year\":\"2016\"},{\"amount\":\"2180\",\"month\":\"4\",\"year\":\"2016\"},{\"amount\":\"3089\",\"month\":\"5\",\"year\":\"2016\"},{\"amount\":\"4906\",\"month\":\"6\",\"year\":\"2016\"},{\"amount\":\"5741\",\"month\":\"7\",\"year\":\"2016\"},{\"amount\":\"3611\",\"month\":\"8\",\"year\":\"2016\"},{\"amount\":\"2458\",\"month\":\"9\",\"year\":\"2016\"},{\"amount\":\"2608\",\"month\":\"10\",\"year\":\"2016\"},{\"amount\":\"5437\",\"month\":\"11\",\"year\":\"2016\"},{\"amount\":\"4219\",\"month\":\"12\",\"year\":\"2016\"}]}";
+        String data = "{\"realList\":[{\"amount\":\"3740\",\"month\":\"1\",\"year\":\"2017\"}," +
+                "{\"amount\":\"2382\",\"month\":\"2\",\"year\":\"2017\"}," +
+                "{\"amount\":\"3329\",\"month\":\"3\",\"year\":\"2017\"}," +
+                "{\"amount\":\"463\",\"month\":\"4\",\"year\":\"2017\"}],\n" +
+                "\"yoyList\":[{\"amount\":\"4571\",\"month\":\"1\",\"year\":\"2016\"}," +
+                "{\"amount\":\"1630\",\"month\":\"2\",\"year\":\"2016\"}," +
+                "{\"amount\":\"2589\",\"month\":\"3\",\"year\":\"2016\"}," +
+                "{\"amount\":\"2180\",\"month\":\"4\",\"year\":\"2016\"}," +
+                "{\"amount\":\"3089\",\"month\":\"5\",\"year\":\"2016\"}," +
+                "{\"amount\":\"4906\",\"month\":\"6\",\"year\":\"2016\"}," +
+                "{\"amount\":\"5741\",\"month\":\"7\",\"year\":\"2016\"}," +
+                "{\"amount\":\"3611\",\"month\":\"8\",\"year\":\"2016\"}," +
+                "{\"amount\":\"2458\",\"month\":\"9\",\"year\":\"2016\"}," +
+                "{\"amount\":\"2608\",\"month\":\"10\",\"year\":\"2016\"}," +
+                "{\"amount\":\"5437\",\"month\":\"11\",\"year\":\"2016\"}," +
+                "{\"amount\":\"4219\",\"month\":\"12\",\"year\":\"2016\"}]}";
         try {
             JSONObject object = new JSONObject(data);
             JSONArray jsonArray = object.getJSONArray("realList");
@@ -114,9 +139,47 @@ public class NewFragment extends Fragment {
         }
     }
 
+    public void getData(){
+        String data ="{\"exponentList\":[{\"dottedLineData\":\"0.0109\",\"exponentDate\":\"07-04\",\"solidLineData\":\"0.0099\"}," +
+                "{\"dottedLineData\":\"0.0102\",\"exponentDate\":\"07-05\",\"solidLineData\":\"0.0039\"}," +
+                "{\"dottedLineData\":\"0.0095\",\"exponentDate\":\"07-06\",\"solidLineData\":\"0.0084\"}," +
+                "{\"dottedLineData\":\"0.0088\",\"exponentDate\":\"07-07\",\"solidLineData\":\"0.0195\"}," +
+                "{\"dottedLineData\":\"0.0081\",\"exponentDate\":\"07-08\",\"solidLineData\":\"0.0148\"}," +
+                "{\"dottedLineData\":\"0.0073\",\"exponentDate\":\"07-09\",\"solidLineData\":\"0.0035\"}," +
+                "{\"dottedLineData\":\"0.0066\",\"exponentDate\":\"07-10\",\"solidLineData\":\"0.0013\"}],\"overviewName\":\"负面舆情指数\"}";
+        try {
+            JSONObject object = new JSONObject(data);
+            JSONArray jsonArray = object.getJSONArray("exponentList");
+            dottedLineData = new ArrayList<>();
+            solidLineData = new ArrayList<>();
+            dataList = new ArrayList<>();
+            BigDecimal scale = new BigDecimal(100);
+            for (int i = 0, count = jsonArray.length(); i < count; i++) {
+                //改了这里
+                JSONObject jsonObject = jsonArray.optJSONObject(i);
+                String dottedData = jsonObject.optString("dottedLineData");
+                String solidData = jsonObject.optString("solidLineData");
+                String exponentDate = jsonObject.optString("exponentDate");
+                BigDecimal solid = new BigDecimal(solidData);
+                BigDecimal dotted = new BigDecimal(dottedData);
+                dottedLineData.add(new Entry(i,scale.multiply(solid).floatValue()));
+                solidLineData.add(new Entry(i,scale.multiply(dotted).floatValue()));
+                if ( Float.valueOf(dottedData)> maxData) {
+                    maxData = Float.valueOf(dottedData);
+                }
+                if (Float.valueOf(solidData)>maxData){
+                    maxData=Float.valueOf(solidData);
+                }
+                dataList.add(exponentDate);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void initViews() {
         mFormat = new DecimalFormat("#,###.##");
-        lineChart = (LineChart) mView.findViewById(R.id.new_lineChart);
+        lineChart = (LineChartInViewPager) mView.findViewById(R.id.new_lineChart);
 
         values1 = new ArrayList<>();
         values2 = new ArrayList<>();
@@ -169,6 +232,131 @@ public class NewFragment extends Fragment {
         }
         String[] labels = new String[]{thisYear, lastYear};
         updateLinehart(yoyList, realList, lineChart, callDurationColors, drawables, "", values1, values2, labels);
+    }
+
+
+    private void updataLineharts(){
+        lineCharts = (LineChartInViewPager) mView.findViewById(R.id.trend_lineChart);
+        List<Entry>[] entries = new ArrayList[2];
+        entries[1] = dottedLineData;
+        entries[0] = solidLineData;
+        int[] cahrtColors = {Color.parseColor("#F0C330"), Color.parseColor("#50C4D9")};
+
+        String[] labels = {"TCL", "趋势线"};
+        boolean[] hasDotted = {true, false};
+        final LineChartEntity lineChartEntity = new LineChartEntity(lineCharts, entries, labels, hasDotted,
+                cahrtColors, R.color.black99, 12f);
+
+        lineCharts.getAxisLeft().setAxisMaximum(maxData*120f);
+        lineCharts.getAxisLeft().setAxisMinimum(0f);
+        lineCharts.getAxisLeft().setGranularity(0.1f);
+        lineCharts.getLegend().setEnabled(false);
+        /*设置横坐标的最小宽度*/
+        lineCharts.getAxisLeft().setMinWidth(25);
+        lineCharts.getAxisRight().setMinWidth(25);
+
+        lineCharts.getXAxis().enableGridDashedLine(10f, 0f, 0f);
+        lineCharts.getXAxis().setGridLineWidth(0.5f);
+        lineCharts.getXAxis().setGridColor(Color.parseColor("#9E9E9E"));
+
+        lineChartEntity.setAxisFormatter(
+                new IAxisValueFormatter() {
+
+                    @Override
+                    public String getFormattedValue(float value, AxisBase axis) {
+
+                        String xValueTemp = mFormat.format(value);
+                        float transferValue = value;
+                        int index;
+                        {
+                            if (xValueTemp.contains(".")) {
+                                return "";
+                            }
+                            index = (int) value;
+                            index = Math.abs(index);
+                        }
+
+                        if (index < 0) {
+                            return "";
+                        }
+
+                        if (index >= dottedLineData.size()) {
+                            return "";
+                        }
+                        String timeTemp = dataList.get(index);
+                        return timeTemp;
+                    }
+
+                }, new IAxisValueFormatter() {
+                    @Override
+                    public String getFormattedValue(float value, AxisBase axis) {
+                        return mFormat.format(value) + "%";
+                    }
+                }
+        );
+
+        lineChartEntity.setLineMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
+        lineChartEntity.initLegend(Legend.LegendForm.CIRCLE, 13f, Color.parseColor("#999999"));
+        lineChartEntity.updateLegendOrientation(Legend.LegendVerticalAlignment.TOP, Legend.LegendHorizontalAlignment.RIGHT, Legend.LegendOrientation.HORIZONTAL);
+        lineCharts.getData().setDrawValues(false);
+//        lineCharts.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+
+        if(dataList.size()>1)
+//        lineCharts.getXAxis().setLabelRotationAngle(-30);
+            lineCharts.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+                @Override
+                public boolean onPreDraw() {
+                    lineCharts.getViewTreeObserver().removeOnPreDrawListener(this);
+                    int width = lineCharts.getWidth();
+                    if(dataList.size()>0){
+                        String xAxis = dataList.get(0);
+                        int totalWidth = (int) (dataList.size() * lineCharts.getResources().getDisplayMetrics().density * xAxis.length()*9);
+                        float scale = (float) totalWidth / width;
+                        if (scale < 1) {
+                            scale = 1;
+                        }
+                        lineChartEntity.setMinMaxScaleX(scale, scale);
+                    }else{
+                        lineChartEntity.setMinMaxScaleX(1.0f, 1.0f);
+                    }
+                    return false;
+                }
+            });
+
+//        if (entity.getType().equals("0")) {
+//            lineCharts.getXAxis().setLabelCount(entity.getExponentList().size() - 1);
+//        }
+        final NewMarkerView markerView = new NewMarkerView(getActivity(), R.layout.custom_marker_view_layout,false);
+        markerView.setCallBack(new NewMarkerView.CallBack() {
+            @Override
+            public void onCallBack(float x, String value) {
+                int index = (int) x;
+                if (index >= dataList.size()) {
+                    return;
+                }
+
+                if(!TextUtils.isEmpty(value)){
+                    float data = Float.parseFloat(value);
+                    BigDecimal solid = new BigDecimal(dottedLineData.get(index).getY());
+                    BigDecimal scale = new BigDecimal(100);
+                    float solidInvert = solid.multiply(scale).floatValue();
+                    if(solidInvert==data*100){
+                        markerView.getTvContent().setVisibility(View.VISIBLE);
+                        markerView.getTvContent().setText(dataList.get(index) + "\n" + mFormat.format(data)+ "%");
+                    }
+                    else{
+                        markerView.getTvContent().setVisibility(View.INVISIBLE);
+                    }
+                }else{
+                    markerView.getTvContent().setText( dataList.get(index)+ "\n" + "%");
+                }
+            }
+        });
+        lineChartEntity.setMarkView(markerView);
+        LineDataSet.Mode[] modes = new LineDataSet.Mode[2];
+        modes[0] =  LineDataSet.Mode.LINEAR;
+        modes[1] = LineDataSet.Mode.HORIZONTAL_BEZIER;
+        lineChartEntity.setLineMode(modes);
     }
 
     /**

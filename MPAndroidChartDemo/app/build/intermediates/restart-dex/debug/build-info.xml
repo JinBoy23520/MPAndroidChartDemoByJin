@@ -1,36 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
+    abi="armeabi-v7a,armeabi"
     api-level="21"
+    build-mode="COLD"
     density="xxhdpi"
-    format="8"
-    plugin-version="2.2.0"
-    timestamp="94779472555185"
+    format="10"
+    plugin-version="2.3.2"
+    timestamp="1499828350337"
     token="-7761120674544607739"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="270" />
+        duration="238" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="12" />
+        duration="8" />
     <task
         name="verifier"
-        duration="7" />
+        duration="2" />
 
     <artifact
+        location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
         location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        type="SPLIT_MAIN" />
 
     <build
-        timestamp="94779472555185"
+        build-mode="FULL"
+        timestamp="1499822687385"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
-            type="MAIN" />
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1499828350337"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
