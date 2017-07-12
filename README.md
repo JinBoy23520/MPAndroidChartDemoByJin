@@ -22,3 +22,6 @@ MPAndroidChart项目实战Demo
 <br>
 [MPAndroidChart X轴文字斜着显示](http://blog.csdn.net/dt235201314/article/details/73648073 "鼠标悬停显示")
 <br>
+<br>
+[MPAndroidChart项目实战（五）——组合图实现趋势图](http://blog.csdn.net/dt235201314/article/details/75009573 "鼠标悬停显示")
+<br>
