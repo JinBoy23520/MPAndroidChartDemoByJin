@@ -70,7 +70,6 @@ public class NewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         getData();
         test();
         mView = inflater.inflate(R.layout.fragment_new, container, false);
@@ -254,11 +253,9 @@ public class NewFragment extends Fragment {
         /*设置横坐标的最小宽度*/
         lineCharts.getAxisLeft().setMinWidth(25);
         lineCharts.getAxisRight().setMinWidth(25);
-
         lineCharts.getXAxis().enableGridDashedLine(10f, 0f, 0f);
         lineCharts.getXAxis().setGridLineWidth(0.5f);
         lineCharts.getXAxis().setGridColor(Color.parseColor("#9E9E9E"));
-
         lineChartEntity.setAxisFormatter(
                 new IAxisValueFormatter() {
 
@@ -294,13 +291,11 @@ public class NewFragment extends Fragment {
                     }
                 }
         );
-
         lineChartEntity.setLineMode(LineDataSet.Mode.HORIZONTAL_BEZIER);
         lineChartEntity.initLegend(Legend.LegendForm.CIRCLE, 13f, Color.parseColor("#999999"));
         lineChartEntity.updateLegendOrientation(Legend.LegendVerticalAlignment.TOP, Legend.LegendHorizontalAlignment.RIGHT, Legend.LegendOrientation.HORIZONTAL);
         lineCharts.getData().setDrawValues(false);
-//        lineCharts.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-
+        lineCharts.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         if(dataList.size()>1)
 //        lineCharts.getXAxis().setLabelRotationAngle(-30);
             lineCharts.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
@@ -323,9 +318,6 @@ public class NewFragment extends Fragment {
                 }
             });
 
-//        if (entity.getType().equals("0")) {
-//            lineCharts.getXAxis().setLabelCount(entity.getExponentList().size() - 1);
-//        }
         final NewMarkerView markerView = new NewMarkerView(getActivity(), R.layout.custom_marker_view_layout,false);
         markerView.setCallBack(new NewMarkerView.CallBack() {
             @Override

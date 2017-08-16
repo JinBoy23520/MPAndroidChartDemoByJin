@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import com.barchart.mpchartdemo.view.CustomViewPager;
@@ -18,7 +19,8 @@ public class MainActivity extends FragmentActivity {
 	private RadioGroup rGrpAllTabP;
 	private NewFragment newFragment = new NewFragment(); //老版页面
 	private OldFragment oldFragment = new OldFragment(); //新版页面
-	private RadioButton rBtn_oldTab,rBtn_newTab;
+	private ViewFragment viewFragment = new ViewFragment(); //新版页面
+	private RadioButton rBtn_oldTab,rBtn_newTab,rBtn_myTab;
 	private static CustomViewPager mViewPager;
 
 
@@ -30,6 +32,7 @@ public class MainActivity extends FragmentActivity {
 		rGrpAllTabP = (RadioGroup)findViewById(R.id.rGrpAllTabP);
 		rBtn_oldTab = (RadioButton)findViewById(R.id.rBtn_oldTab);
 		rBtn_newTab = (RadioButton)findViewById(R.id.rBtn_newTab);
+		rBtn_myTab = (RadioButton)findViewById(R.id.rBtn_myTab);
 		initListener();
 		setUpViewPager();
 	}
@@ -46,6 +49,9 @@ public class MainActivity extends FragmentActivity {
 					case R.id.rBtn_newTab:
 						position = 1;
 						break;
+					case R.id.rBtn_myTab:
+						position = 2;
+						break;
 				}
 				rGrpAllTabP.check(checkedId);
 				if (mViewPager != null) mViewPager.setCurrentItem(position, true);
@@ -54,6 +60,7 @@ public class MainActivity extends FragmentActivity {
 		listFragment = new ArrayList<>();
 		listFragment.add(newFragment);
 		listFragment.add(oldFragment);
+		listFragment.add(viewFragment);
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		FragmentPagerAdapter fragmentPagerAdapter = new FragmentPagerAdapter(fragmentManager) {
 			@Override
@@ -81,6 +88,8 @@ public class MainActivity extends FragmentActivity {
 					checkId = R.id.rBtn_oldTab;
 				} else if (position == 1) {
 					checkId = R.id.rBtn_newTab;
+				}else if (position == 2) {
+					checkId = R.id.rBtn_myTab;
 				}
 				if (rGrpAllTabP != null)
 					rGrpAllTabP.check(checkId);

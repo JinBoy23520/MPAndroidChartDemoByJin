@@ -57,10 +57,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="yoy_value">同比数</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     <style name="fans_tab_bottom_style">
         <item name="android:layout_width">0dp</item>

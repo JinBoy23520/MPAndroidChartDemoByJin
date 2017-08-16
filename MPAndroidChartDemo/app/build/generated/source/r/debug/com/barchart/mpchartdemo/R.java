@@ -75,26 +75,36 @@ public final class R {
         public static final int tab_text_selector=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000d;
-        public static final int barChart=0x7f0a000b;
-        public static final int lineChart=0x7f0a000c;
-        public static final int new_lineChart=0x7f0a0006;
-        public static final int new_pie_chart=0x7f0a0007;
-        public static final int new_the_bar_chart=0x7f0a0009;
-        public static final int new_the_pie_chart=0x7f0a0008;
-        public static final int new_x_bar_chart=0x7f0a000a;
-        public static final int pager=0x7f0a0003;
+        public static final int action_settings=0x7f0a0015;
+        public static final int bar=0x7f0a0011;
+        public static final int barChart=0x7f0a000c;
+        public static final int bar_container=0x7f0a0010;
+        public static final int bt_refresh=0x7f0a0014;
+        public static final int container=0x7f0a0013;
+        public static final int index=0x7f0a000e;
+        public static final int lineChart=0x7f0a000d;
+        public static final int name=0x7f0a000f;
+        public static final int new_lineChart=0x7f0a0007;
+        public static final int new_pie_chart=0x7f0a0008;
+        public static final int new_the_bar_chart=0x7f0a000a;
+        public static final int new_the_pie_chart=0x7f0a0009;
+        public static final int new_x_bar_chart=0x7f0a000b;
+        public static final int pager=0x7f0a0004;
+        public static final int percent=0x7f0a0012;
+        public static final int rBtn_myTab=0x7f0a0003;
         public static final int rBtn_newTab=0x7f0a0002;
         public static final int rBtn_oldTab=0x7f0a0001;
         public static final int rGrpAllTabP=0x7f0a0000;
-        public static final int trend_lineChart=0x7f0a0005;
-        public static final int tvContent=0x7f0a0004;
+        public static final int trend_lineChart=0x7f0a0006;
+        public static final int tvContent=0x7f0a0005;
     }
     public static final class layout {
         public static final int activity_main=0x7f040000;
         public static final int custom_marker_view_layout=0x7f040001;
         public static final int fragment_new=0x7f040002;
         public static final int fragment_old=0x7f040003;
+        public static final int h_bar_item=0x7f040004;
+        public static final int view_fragment=0x7f040005;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -115,8 +125,15 @@ public final class R {
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
          */
         public static final int AppBaseTheme=0x7f060000;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f060001;
         public static final int fans_tab_bottom_style=0x7f060002;
     }

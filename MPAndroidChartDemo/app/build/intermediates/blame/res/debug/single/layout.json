@@ -1,5 +1,13 @@
 [
     {
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_fragment.xml",
+        "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\view_fragment.xml"
+    },
+    {
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\h_bar_item.xml",
+        "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\h_bar_item.xml"
+    },
+    {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_new.xml",
         "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\fragment_new.xml"
     },

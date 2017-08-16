@@ -33,6 +33,14 @@
                 android:background="#00000000"
                 android:text="老版本" />
 
+            <RadioButton
+                android:id="@+id/rBtn_myTab"
+                style="@style/fans_tab_bottom_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#00000000"
+                android:text="自定义" />
+
         </RadioGroup>
 
         <com.barchart.mpchartdemo.view.CustomViewPager

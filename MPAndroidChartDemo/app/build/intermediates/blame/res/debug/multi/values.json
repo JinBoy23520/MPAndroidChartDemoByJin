@@ -904,7 +904,14 @@
                     "endOffset": 2255
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\dimens.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 92,
+                        "endColumn": 57,
+                        "endOffset": 145
+                    }
                 }
             },
             {
@@ -916,7 +923,14 @@
                     "endOffset": 2311
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\dimens.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 55,
+                        "endOffset": 202
+                    }
                 }
             },
             {
@@ -928,7 +942,14 @@
                     "endOffset": 2364
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 52,
+                        "endOffset": 160
+                    }
                 }
             },
             {
@@ -940,7 +961,14 @@
                     "endOffset": 2409
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 350,
+                        "endColumn": 44,
+                        "endOffset": 390
+                    }
                 }
             },
             {
@@ -952,7 +980,14 @@
                     "endOffset": 2461
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 51,
+                        "endOffset": 106
+                    }
                 }
             },
             {
@@ -964,7 +999,14 @@
                     "endOffset": 2506
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 396,
+                        "endColumn": 44,
+                        "endOffset": 436
+                    }
                 }
             },
             {
@@ -976,7 +1018,14 @@
                     "endOffset": 2576
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 277,
+                        "endColumn": 69,
+                        "endOffset": 342
+                    }
                 }
             },
             {
@@ -988,7 +1037,14 @@
                     "endOffset": 2629
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 52,
+                        "endOffset": 214
+                    }
                 }
             },
             {
@@ -1000,7 +1056,14 @@
                     "endOffset": 2671
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 442,
+                        "endColumn": 41,
+                        "endOffset": 479
+                    }
                 }
             },
             {
@@ -1008,38 +1071,62 @@
                     "startLine": 58,
                     "startColumn": 4,
                     "startOffset": 2676,
-                    "endLine": 60,
+                    "endLine": 64,
                     "endColumn": 12,
-                    "endOffset": 2754
+                    "endOffset": 2962
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\styles.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 192,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 484
+                    }
                 }
             },
             {
                 "to": {
-                    "startLine": 61,
+                    "startLine": 65,
                     "startColumn": 4,
-                    "startOffset": 2759,
-                    "endLine": 63,
+                    "startOffset": 2967,
+                    "endLine": 67,
                     "endColumn": 12,
-                    "endOffset": 2826
+                    "endOffset": 3122
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\styles.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 525,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 682
+                    }
                 }
             },
             {
                 "to": {
-                    "startLine": 64,
+                    "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 2831,
-                    "endLine": 75,
+                    "startOffset": 3127,
+                    "endLine": 79,
                     "endColumn": 12,
-                    "endOffset": 3456
+                    "endOffset": 3752
                 },
                 "from": {
-                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\styles.xml"
+                    "file": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 709,
+                        "endLine": 31,
+                        "endColumn": 12,
+                        "endOffset": 1345
+                    }
                 }
             }
         ]
