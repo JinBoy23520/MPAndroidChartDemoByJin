@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line" >
+
+    <!--线宽为dashWith，线之间空隙dashGap，dashGap=0dp时，是实线 -->
+    <stroke
+        android:dashGap="5dip"
+        android:dashWidth="6dip"
+        android:width="1dip"
+        android:color="@color/dash_line" />
+
+    <!-- 虚线高度 -->
+    <size android:height="1dip" />
+
+</shape>

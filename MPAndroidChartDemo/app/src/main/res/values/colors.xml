@@ -18,6 +18,7 @@
     <color name="text_color">#666666</color>
     <color name="title_bottom_line">#dfdfdf</color>
     <color name="bg_loading">#f0f0f3</color>
+    <color name="dash_line">#D9D9D9</color>
 
     <color name="color_channel_pressed">#f2f2f2</color>
     <color name="text_33">#3B3B3B</color>

@@ -8,12 +8,20 @@
         "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\h_bar_item.xml"
     },
     {
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bar_item.xml",
+        "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\bar_item.xml"
+    },
+    {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_new.xml",
         "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\fragment_new.xml"
     },
     {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_marker_view_layout.xml",
         "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\custom_marker_view_layout.xml"
+    },
+    {
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_bg.xml",
+        "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\pop_bg.xml"
     },
     {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_old.xml",

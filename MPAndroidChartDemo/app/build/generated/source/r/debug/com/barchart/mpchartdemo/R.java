@@ -29,35 +29,36 @@ public final class R {
         public static final int colorPrimary=0x7f07000f;
         public static final int color_channel_pressed=0x7f070010;
         public static final int color_mine_line=0x7f070011;
-        public static final int eeeeee=0x7f070012;
-        public static final int financeAll=0x7f070013;
-        public static final int financeBCNet=0x7f070014;
-        public static final int financeG80L100=0x7f070015;
-        public static final int financeGreat100=0x7f070016;
-        public static final int financeItemBg=0x7f070017;
-        public static final int financeLow80=0x7f070018;
-        public static final int financeTabBg=0x7f070019;
-        public static final int gray1=0x7f07001a;
-        public static final int gray2=0x7f07001b;
-        public static final int gray3=0x7f07001c;
-        public static final int gray4=0x7f07001d;
-        public static final int greenLight=0x7f07001e;
-        public static final int six18_cell_bg=0x7f07001f;
-        public static final int six18_red=0x7f070020;
-        public static final int tab_text_selected=0x7f070021;
-        public static final int text_33=0x7f070022;
-        public static final int text_color=0x7f070023;
-        public static final int title_bottom_line=0x7f070024;
-        public static final int title_colcor=0x7f070025;
-        public static final int tv_cm_textColor=0x7f070026;
-        public static final int view1_bg=0x7f070027;
-        public static final int view2_bg=0x7f070028;
-        public static final int view3_bg=0x7f070029;
-        public static final int view4_bg=0x7f07002a;
-        public static final int whell_item_bg_select=0x7f07002b;
-        public static final int white=0x7f07002c;
-        public static final int whole_back=0x7f07002d;
-        public static final int withe=0x7f07002e;
+        public static final int dash_line=0x7f070012;
+        public static final int eeeeee=0x7f070013;
+        public static final int financeAll=0x7f070014;
+        public static final int financeBCNet=0x7f070015;
+        public static final int financeG80L100=0x7f070016;
+        public static final int financeGreat100=0x7f070017;
+        public static final int financeItemBg=0x7f070018;
+        public static final int financeLow80=0x7f070019;
+        public static final int financeTabBg=0x7f07001a;
+        public static final int gray1=0x7f07001b;
+        public static final int gray2=0x7f07001c;
+        public static final int gray3=0x7f07001d;
+        public static final int gray4=0x7f07001e;
+        public static final int greenLight=0x7f07001f;
+        public static final int six18_cell_bg=0x7f070020;
+        public static final int six18_red=0x7f070021;
+        public static final int tab_text_selected=0x7f070022;
+        public static final int text_33=0x7f070023;
+        public static final int text_color=0x7f070024;
+        public static final int title_bottom_line=0x7f070025;
+        public static final int title_colcor=0x7f070026;
+        public static final int tv_cm_textColor=0x7f070027;
+        public static final int view1_bg=0x7f070028;
+        public static final int view2_bg=0x7f070029;
+        public static final int view3_bg=0x7f07002a;
+        public static final int view4_bg=0x7f07002b;
+        public static final int whell_item_bg_select=0x7f07002c;
+        public static final int white=0x7f07002d;
+        public static final int whole_back=0x7f07002e;
+        public static final int withe=0x7f07002f;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -73,45 +74,65 @@ public final class R {
         public static final int ic_launcher=0x7f020006;
         public static final int line_bg_pressed=0x7f020007;
         public static final int tab_text_selector=0x7f020008;
+        public static final int view_dash_line=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0015;
-        public static final int bar=0x7f0a0011;
-        public static final int barChart=0x7f0a000c;
-        public static final int bar_container=0x7f0a0010;
-        public static final int bt_refresh=0x7f0a0014;
-        public static final int container=0x7f0a0013;
-        public static final int index=0x7f0a000e;
-        public static final int lineChart=0x7f0a000d;
-        public static final int name=0x7f0a000f;
-        public static final int new_lineChart=0x7f0a0007;
-        public static final int new_pie_chart=0x7f0a0008;
-        public static final int new_the_bar_chart=0x7f0a000a;
-        public static final int new_the_pie_chart=0x7f0a0009;
-        public static final int new_x_bar_chart=0x7f0a000b;
+        public static final int action_settings=0x7f0a0023;
+        public static final int bar=0x7f0a0014;
+        public static final int barChart=0x7f0a000f;
+        public static final int barView=0x7f0a0005;
+        public static final int bar_container=0x7f0a0013;
+        public static final int bar_group=0x7f0a0021;
+        public static final int bar_scroll=0x7f0a0020;
+        public static final int base_line=0x7f0a001f;
+        public static final int bg=0x7f0a0018;
+        public static final int bt_refresh=0x7f0a0017;
+        public static final int bt_refresh1=0x7f0a0022;
+        public static final int container=0x7f0a0016;
+        public static final int index=0x7f0a0011;
+        public static final int left_base_line=0x7f0a001a;
+        public static final int lineChart=0x7f0a0010;
+        public static final int name=0x7f0a0012;
+        public static final int new_lineChart=0x7f0a000a;
+        public static final int new_pie_chart=0x7f0a000b;
+        public static final int new_the_bar_chart=0x7f0a000d;
+        public static final int new_the_pie_chart=0x7f0a000c;
+        public static final int new_x_bar_chart=0x7f0a000e;
         public static final int pager=0x7f0a0004;
-        public static final int percent=0x7f0a0012;
+        public static final int percent=0x7f0a0007;
         public static final int rBtn_myTab=0x7f0a0003;
         public static final int rBtn_newTab=0x7f0a0002;
         public static final int rBtn_oldTab=0x7f0a0001;
         public static final int rGrpAllTabP=0x7f0a0000;
-        public static final int trend_lineChart=0x7f0a0006;
-        public static final int tvContent=0x7f0a0005;
+        public static final int title=0x7f0a0006;
+        public static final int trend_lineChart=0x7f0a0009;
+        public static final int tvContent=0x7f0a0008;
+        public static final int tv_num1=0x7f0a001e;
+        public static final int tv_num2=0x7f0a001d;
+        public static final int tv_num3=0x7f0a001c;
+        public static final int tv_num4=0x7f0a001b;
+        public static final int tv_num5=0x7f0a0019;
+        public static final int txt=0x7f0a0015;
     }
     public static final class layout {
         public static final int activity_main=0x7f040000;
-        public static final int custom_marker_view_layout=0x7f040001;
-        public static final int fragment_new=0x7f040002;
-        public static final int fragment_old=0x7f040003;
-        public static final int h_bar_item=0x7f040004;
-        public static final int view_fragment=0x7f040005;
+        public static final int bar_item=0x7f040001;
+        public static final int custom_marker_view_layout=0x7f040002;
+        public static final int fragment_new=0x7f040003;
+        public static final int fragment_old=0x7f040004;
+        public static final int h_bar_item=0x7f040005;
+        public static final int pop_bg=0x7f040006;
+        public static final int view_fragment=0x7f040007;
     }
     public static final class menu {
         public static final int main=0x7f090000;
     }
     public static final class mipmap {
-        public static final int tv_top_arrow_tcl=0x7f030000;
-        public static final int tv_top_arrow_trend=0x7f030001;
+        public static final int iv_sentiment_left=0x7f030000;
+        public static final int iv_sentiment_middle=0x7f030001;
+        public static final int iv_sentiment_right=0x7f030002;
+        public static final int tv_top_arrow_tcl=0x7f030003;
+        public static final int tv_top_arrow_trend=0x7f030004;
     }
     public static final class string {
         public static final int action_settings=0x7f080000;
@@ -135,6 +156,7 @@ public final class R {
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
-        public static final int fans_tab_bottom_style=0x7f060002;
+        public static final int barchartBar=0x7f060002;
+        public static final int fans_tab_bottom_style=0x7f060003;
     }
 }

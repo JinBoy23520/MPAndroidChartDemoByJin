@@ -18,6 +18,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="color_channel_pressed">#f2f2f2</color>
     <color name="color_mine_line">#eeeef0</color>
+    <color name="dash_line">#D9D9D9</color>
     <color name="eeeeee">#eeeeee</color>
     <color name="financeAll">#fdffe8</color>
     <color name="financeBCNet">#ebfeff</color>
@@ -65,6 +66,15 @@
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="barchartBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black99</item>
     </style>
     <style name="fans_tab_bottom_style">
         <item name="android:layout_width">0dp</item>
