@@ -29,5 +29,5 @@ MPAndroidChart项目实战Demo
 [MPAndroidChart项目实战（六）——自定义1MPAndroidChart滑动冲突解决（搞不定产品设计师就只能搞自己）](http://blog.csdn.net/dt235201314/article/details/76576618 "鼠标悬停显示")
 <br>
 <br>
-[MPAndroidChart项目实战（七）——自定义对比横向柱状图](http://blog.csdn.net/dt235201314/article/details/77248347 "鼠标悬停显示")
+[MPAndroidChart项目实战（八）——自定义分段堆积柱状图](http://blog.csdn.net/dt235201314/article/details/77534468 "鼠标悬停显示")
 <br>
