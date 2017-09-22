@@ -73,7 +73,6 @@ public class Source{
     public List<Source> parseData() {
         list = new ArrayList<>();
         Random r = new Random();
-        int all=0;
         for (int i= 0;i<=6;i++){
             Source source = new Source();
             source.setBadCount(r.nextInt(100));

@@ -5,7 +5,7 @@ package com.barchart.mpchartdemo.entity;
  */
 
 public class BarEntity {
-    public String title = "酷友数据";
+    public String title = "";
     private float positivePer;
     public String negativeColor  = "#FEB356";
     private float neutralPer ;

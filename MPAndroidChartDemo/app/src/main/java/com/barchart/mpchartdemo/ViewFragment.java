@@ -21,8 +21,11 @@ import android.widget.TextView;
 import com.barchart.mpchartdemo.entity.BarDataEntity;
 import com.barchart.mpchartdemo.entity.BarEntity;
 import com.barchart.mpchartdemo.entity.SourceEntity;
+import com.barchart.mpchartdemo.entity.TextBarDataEntity;
 import com.barchart.mpchartdemo.view.BarGroup;
 import com.barchart.mpchartdemo.view.BarView;
+import com.barchart.mpchartdemo.view.TextBarGroupView;
+import com.nex3z.flowlayout.FlowLayout;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -61,6 +64,7 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
         btRefresh1.setOnClickListener(this);
         bindData();
         setBarChart();
+        textBarData();
         return itemView;
     }
 
@@ -124,7 +128,6 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
 
     public void setBarChart(){
         barGroup = (BarGroup) itemView.findViewById(R.id.bar_group);
-
         root = (HorizontalScrollView) itemView.findViewById(R.id.bar_scroll);
         popView = LayoutInflater.from(getContext()).inflate(
                 R.layout.pop_bg, null);
@@ -199,11 +202,6 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
                                     + "中性：" + (int) ss.getOtherCount() + "条\n"
                                     + "负面：" + (int) ss.getBadCount() + "条";
                             ((TextView) popView.findViewById(R.id.txt)).setText(showText);
-//                            if (finalI >=2) {
-//                                popView.setBackgroundResource(R.drawable.chart_popu_right);
-//                            } else {
-//                                popView.setBackgroundResource(R.drawable.chart_popu);
-//                            }
                             showPop(barItem, top);
                         }
                     });
@@ -250,6 +248,28 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
         ((TextView) itemView.findViewById(R.id.tv_num3)).setText((int) sourceMax * 3 / 5 + "");
         ((TextView) itemView.findViewById(R.id.tv_num4)).setText((int) sourceMax * 4 / 5 + "");
         ((TextView) itemView.findViewById(R.id.tv_num5)).setText((int) sourceMax + "");
+    }
+
+    public void textBarData() {
+        final TextBarDataEntity data = new TextBarDataEntity();
+        data.parseData();
+        final FlowLayout sourceContainer= (FlowLayout) itemView.findViewById(R.id.container2);
+        itemView.findViewById(R.id.bg_text).getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                itemView.findViewById(R.id.bg_text).getViewTreeObserver().removeOnPreDrawListener(this);
+                if (data != null) {
+//                    ((TextView) itemView.findViewById(R.id.tv_head_item)).setText(data.overviewName);
+                    ((TextBarGroupView) itemView.findViewById(R.id.bar_group_text)).
+                            init(data.recordList, itemView.findViewById(R.id.item0).getHeight() * 5,sourceContainer);
+                } else {
+//                    ((TextView) itemView.findViewById(R.id.tv_head_item)).setText("");
+                    ((TextBarGroupView) itemView.findViewById(R.id.bar_group_text)).
+                            init(null, itemView.findViewById(R.id.item0).getHeight() * 5,sourceContainer);
+                }
+                return false;
+            }
+        });
     }
 
     @Override

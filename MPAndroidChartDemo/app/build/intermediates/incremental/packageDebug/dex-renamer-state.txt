@@ -1,4 +1,4 @@
-#Wed Aug 23 10:05:34 CST 2017
+#Fri Sep 15 17:25:55 CST 2017
 base.0=D\:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0177194e1af02c31cce292a1815d257a145a1370
 renamed.1=classes.dex
 renamed.0=classes2.dex

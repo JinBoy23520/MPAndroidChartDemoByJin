@@ -44,14 +44,6 @@ public class BarGroup extends LinearLayout {
     public void setDatas(List<BarEntity> datas) {
         if (datas != null) {
             this.datas = datas;
-//            for (int i = 0; i < datas.size(); i++) {
-//                View view = LayoutInflater.from(getContext()).inflate(R.layout.bar_item, null);
-//                ((BarView) view.findViewById(R.id.barView)).setData(datas.get(i));
-//                ((TextView)view.findViewById(R.id.title)).setText(getFeedString(datas.get(i).getTitle()));
-//                DecimalFormat mFormat=new DecimalFormat("##"); ;
-//                ((TextView)view.findViewById(R.id.percent)).setText(mFormat.format(datas.get(i).getScale()*100)+"%");
-//                addView(view);
-//            }
         }
     }
 

@@ -21,7 +21,6 @@ public class BarView extends View {
     private Paint paint;
     private float animTimeCell = 0;
 
-
     public BarView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();

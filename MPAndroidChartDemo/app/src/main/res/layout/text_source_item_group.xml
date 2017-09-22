@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/text_bar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time"
+        android:layout_alignRight="@+id/time"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.barchart.mpchartdemo.view.TextBarView
+            android:id="@+id/barview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.barchart.mpchartdemo.view.TextBarView>
+
+        <View
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_bar_container"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="17.01.01-17.03.31"
+        android:textSize="12sp" />
+</RelativeLayout>
