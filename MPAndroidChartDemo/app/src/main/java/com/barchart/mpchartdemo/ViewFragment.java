@@ -37,7 +37,7 @@ import java.util.List;
 public class ViewFragment extends Fragment implements View.OnClickListener{
     View itemView;
     LinearLayout container;
-    Button btRefresh,btRefresh1;
+    Button btRefresh,btRefresh1,btRefresh2;
     DecimalFormat format = new DecimalFormat("##.##");
 
     DecimalFormat mFormat = new DecimalFormat("##.####");
@@ -61,8 +61,10 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
         itemView = inflater.inflate(R.layout.view_fragment, container, false);
         btRefresh = (Button) itemView.findViewById(R.id.bt_refresh);
         btRefresh1 = (Button) itemView.findViewById(R.id.bt_refresh1);
+        btRefresh2 = (Button) itemView.findViewById(R.id.bt_refresh2);
         btRefresh.setOnClickListener(this);
         btRefresh1.setOnClickListener(this);
+        btRefresh2.setOnClickListener(this);
         bindData();
         setBarChart();
         textBarData(textBarDataEntity);
@@ -279,6 +281,10 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.bt_refresh1:
                 setBarChart();
+                break;
+            case R.id.bt_refresh2:
+                TextBarDataEntity textBarDataEntity = new TextBarDataEntity(); //仿数据请求了
+                textBarData(textBarDataEntity);
                 break;
         }
     }

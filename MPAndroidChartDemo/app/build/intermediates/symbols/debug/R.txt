@@ -600,7 +600,7 @@ int id action_menu_presenter 0x7f0b0003
 int id action_mode_bar 0x7f0b0046
 int id action_mode_bar_stub 0x7f0b0045
 int id action_mode_close_button 0x7f0b0028
-int id action_settings 0x7f0b009f
+int id action_settings 0x7f0b00a0
 int id action_text 0x7f0b0079
 int id actions 0x7f0b0087
 int id activity_chooser_view_content 0x7f0b0029
@@ -625,6 +625,7 @@ int id bg_text 0x7f0b006c
 int id bottom 0x7f0b0024
 int id bt_refresh 0x7f0b0093
 int id bt_refresh1 0x7f0b009e
+int id bt_refresh2 0x7f0b009f
 int id buttonPanel 0x7f0b0030
 int id cancel_action 0x7f0b007b
 int id checkbox 0x7f0b0040
