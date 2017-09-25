@@ -53,6 +53,7 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
     private RelativeLayout.LayoutParams lp;
     private PopupWindow popupWindow;
     private View popView;
+    TextBarDataEntity textBarDataEntity = new TextBarDataEntity();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,7 +65,7 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
         btRefresh1.setOnClickListener(this);
         bindData();
         setBarChart();
-        textBarData();
+        textBarData(textBarDataEntity);
         return itemView;
     }
 
@@ -250,9 +251,7 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
         ((TextView) itemView.findViewById(R.id.tv_num5)).setText((int) sourceMax + "");
     }
 
-    public void textBarData() {
-        final TextBarDataEntity data = new TextBarDataEntity();
-        data.parseData();
+    public void textBarData(final TextBarDataEntity data) {
         final FlowLayout sourceContainer= (FlowLayout) itemView.findViewById(R.id.container2);
         itemView.findViewById(R.id.bg_text).getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
             @Override
@@ -261,7 +260,7 @@ public class ViewFragment extends Fragment implements View.OnClickListener{
                 if (data != null) {
 //                    ((TextView) itemView.findViewById(R.id.tv_head_item)).setText(data.overviewName);
                     ((TextBarGroupView) itemView.findViewById(R.id.bar_group_text)).
-                            init(data.recordList, itemView.findViewById(R.id.item0).getHeight() * 5,sourceContainer);
+                            init(data.getRecordList(), itemView.findViewById(R.id.item0).getHeight() * 5,sourceContainer);
                 } else {
 //                    ((TextView) itemView.findViewById(R.id.tv_head_item)).setText("");
                     ((TextBarGroupView) itemView.findViewById(R.id.bar_group_text)).

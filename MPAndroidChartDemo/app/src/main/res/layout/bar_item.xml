@@ -5,28 +5,28 @@
     android:orientation="vertical"
     android:paddingRight="50dp">
 
-    <FrameLayout
-        android:id="@+id/bar_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/time"
-        android:layout_alignRight="@+id/time"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+    <!--<FrameLayout-->
+        <!--android:id="@+id/bar_container"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignLeft="@+id/time"-->
+        <!--android:layout_alignRight="@+id/time"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp">-->
 
         <com.barchart.mpchartdemo.view.BarView
             android:id="@+id/barView"
             android:layout_width="30dp"
             android:layout_height="220dp" />
 
-        <View
-            android:id="@+id/cover"
-            android:layout_width="30dp"
-            android:layout_height="220dp"
-            android:background="@color/white"
-            />
+        <!--<View-->
+            <!--android:id="@+id/cover"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="220dp"-->
+            <!--android:background="@color/white"-->
+            <!--/>-->
 
-    </FrameLayout>
+    <!--</FrameLayout>-->
 
     <TextView
         android:id="@+id/title"

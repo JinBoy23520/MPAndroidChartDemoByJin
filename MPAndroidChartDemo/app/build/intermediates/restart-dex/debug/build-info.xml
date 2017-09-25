@@ -6,44 +6,39 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.2"
-    timestamp="1505467633936"
+    timestamp="1506072679961"
     token="-7761120674544607739"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="156" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="7" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
+
+    <artifact
+        location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1505463864174"
+        timestamp="1506068051040"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
@@ -58,34 +53,45 @@
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1505467402345"
+        timestamp="1506072308604"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
-        <artifact
-            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1505467553959"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1505467633936"
-        verifier="COLD_SWAP_REQUESTED" />
+        timestamp="1506072679961"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\MPAndroidChartDemoByJin\MPAndroidChartDemo\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
 
 </instant-run>

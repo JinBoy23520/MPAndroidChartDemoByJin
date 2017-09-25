@@ -74,27 +74,27 @@ public class TextBarGroupView extends LinearLayout {
         final int lineHeight = (int) getResources().getDisplayMetrics().density * 1;
         for (int i = 0; i < datas.size(); i++) {
             //加载所有来源，去重复
-            List<TextBarDataEntity.Record.Source> sourceList = datas.get(i).sourceList;
+            List<TextBarDataEntity.Record.Source> sourceList = datas.get(i).getSourceList();
             if (sourceList != null && !sourceList.isEmpty()) {
                 int j = 0;
                 for (TextBarDataEntity.Record.Source entry : sourceList) {
-                    if (!nameColorMap.containsKey(entry.sourceName)) {
+                    if (!nameColorMap.containsKey(entry.getSourceName())) {
                         Integer colorValue = colors.get(j % colors.size());
                         if (!nameColorMap.containsValue(colorValue)) {
-                            nameColorMap.put(entry.sourceName, colorValue);
+                            nameColorMap.put(entry.getSourceName(), colorValue);
                         } else {
                             int index=colors.indexOf(colorValue);
                             for(int x=index;x<colors.size();x++){
                                 Integer colorValue1 = colors.get(x % colors.size());
                                 if(!nameColorMap.containsValue(colorValue1)){
-                                    nameColorMap.put(entry.sourceName, colorValue1);
+                                    nameColorMap.put(entry.getSourceName(), colorValue1);
                                     break;
                                 }
                             }
                         }
                     }
-                    if (!allSourceNameList.contains(entry.sourceName)) {
-                        allSourceNameList.add(entry.sourceName);
+                    if (!allSourceNameList.contains(entry.getSourceName())) {
+                        allSourceNameList.add(entry.getSourceName());
                         allSourceList.add(entry);
                     }
                     j++;
@@ -107,7 +107,7 @@ public class TextBarGroupView extends LinearLayout {
             final View item = LayoutInflater.from(getContext()).inflate(R.layout.text_source_item_group, this, false);
             final TextBarView barView = (TextBarView) item.findViewById(R.id.barview);
             barView.init(datas.get(i), barHeight + lineHeight, nameColorMap);
-            ((TextView) item.findViewById(R.id.time)).setText(datas.get(i).timeScale);
+            ((TextView) item.findViewById(R.id.time)).setText(datas.get(i).getTimeScale());
             item.findViewById(R.id.time).setMinimumWidth((int) (getResources().getDisplayMetrics().density*80));
             if (i == 0) {
                 final LayoutParams lp = (LayoutParams) item.getLayoutParams();
@@ -153,9 +153,9 @@ public class TextBarGroupView extends LinearLayout {
             View item = LayoutInflater.from(getContext()).inflate(R.layout.pie_lable_item, sourceContainer, false);
             GradientDrawable bg = (GradientDrawable) item.findViewById(R.id.icon).getBackground();
             TextView txt = (TextView) item.findViewById(R.id.txt);
-            bg.setColor(nameColorMap.get(source.sourceName));
+            bg.setColor(nameColorMap.get(source.getSourceName()));
             item.findViewById(R.id.icon).setBackground(bg);
-            txt.setText(source.sourceName);
+            txt.setText(source.getSourceName());
             sourceContainer.addView(item);
         }
     }

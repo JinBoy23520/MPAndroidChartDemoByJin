@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
@@ -96,16 +96,16 @@
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
@@ -126,6 +126,10 @@
     {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\0d457b61772fc6bec7f89bc4b49e4511e07bbe36\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_text_bar.xml",
+        "source": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\src\\main\\res\\layout\\item_text_bar.xml"
     },
     {
         "merged": "D:\\MPAndroidChartDemoByJin\\MPAndroidChartDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",

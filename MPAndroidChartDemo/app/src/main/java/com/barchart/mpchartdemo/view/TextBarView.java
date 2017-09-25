@@ -43,15 +43,15 @@ public class TextBarView extends LinearLayout {
     View popView;
 
     public void init(TextBarDataEntity.Record record, int height, Map<String, Integer> nameColorMap) {
-        if (record.sourceList == null && record.sourceList.isEmpty()) {
+        if (record.getSourceList() == null && record.getSourceList().isEmpty()) {
             return;
         }
         popView = LayoutInflater.from(getContext()).inflate(
                 R.layout.pop_bg, null);
         //计算空白填充部分占比
         double blankScale = 1;
-        for (int i = 0; i < record.sourceList.size(); i++) {
-            blankScale -= record.sourceList.get(i).sourceNum;
+        for (int i = 0; i < record.getSourceList().size(); i++) {
+            blankScale -= record.getSourceList().get(i).getSourceNum();
         }
 //        if (blankScale==1) {
 //            TextView item = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.negative_sentiment_source_item_txt, this, false);
@@ -61,15 +61,15 @@ public class TextBarView extends LinearLayout {
 //            return;
 //        }
 
-        for (int i = 0; i < record.sourceList.size(); i++) {
+        for (int i = 0; i < record.getSourceList().size(); i++) {
             final TextView item = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.text_source_item_txt, this, false);
-            final TextBarDataEntity.Record.Source source = record.sourceList.get(i);
-            item.setText(source.sourceNum >= 5 ? format.format(source.sourceNum) + "%" : "");
+            final TextBarDataEntity.Record.Source source = record.getSourceList().get(i);
+            item.setText(source.getSourceNum() >= 5 ? format.format(source.getSourceNum()) + "%" : "");
             GradientDrawable bg = (GradientDrawable) getResources().getDrawable(R.drawable.n_s_bar_bg);
-            bg.setColor(nameColorMap.get(source.sourceName));
+            bg.setColor(nameColorMap.get(source.getSourceName()));
             item.setBackground(bg);
             ViewGroup.LayoutParams lp = item.getLayoutParams();
-            lp.height = (int) (source.sourceNum/100 * height);
+            lp.height = (int) (source.getSourceNum()/(double)100 * height);
             addView(item, lp);
         }
     }

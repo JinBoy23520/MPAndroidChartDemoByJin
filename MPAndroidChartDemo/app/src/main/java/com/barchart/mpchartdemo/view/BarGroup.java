@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -54,6 +55,7 @@ public class BarGroup extends LinearLayout {
                 float barHeight = datas.get(i).getAllcount()/maxValue*height;
                 View view = LayoutInflater.from(getContext()).inflate(R.layout.bar_item, null);
                 LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(DensityUtil.dip2px(getContext(),30),height);
+//                FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(DensityUtil.dip2px(getContext(),30),height);
 //                view.setLayoutParams(lp);
                 ((BarView) view.findViewById(R.id.barView)).setData(datas.get(i));
                 (view.findViewById(R.id.barView)).setLayoutParams(lp);

@@ -16,41 +16,94 @@ import java.util.Random;
  */
 
 public class TextBarDataEntity {
-    public String overviewName;//区块名称
-    public List<Record> recordList;//数据列表，按时间区间
+    private String overviewName;//区块名称
+    private List<Record> recordList;//数据列表，按时间区间
+
+    public TextBarDataEntity(){
+        setRecordList(parseData());
+    }
+
+    public String getOverviewName() {
+        return overviewName;
+    }
+
+    public void setOverviewName(String overviewName) {
+        this.overviewName = overviewName;
+    }
+
+    public List<Record> getRecordList() {
+        return recordList;
+    }
+
+    public void setRecordList(List<Record> recordList) {
+        this.recordList = recordList;
+    }
 
     public static class Record implements Serializable {
-        public String timeScale;//时间区间
-        public List<Source> sourceList;//来源数据列表
+        private String timeScale;//时间区间
+        private List<Source> sourceList;//来源数据列表
+
+        public String getTimeScale() {
+            return timeScale;
+        }
+
+        public void setTimeScale(String timeScale) {
+            this.timeScale = timeScale;
+        }
+
+        public List<Source> getSourceList() {
+            return sourceList;
+        }
+
+        public void setSourceList(List<Source> sourceList) {
+            this.sourceList = sourceList;
+        }
 
         public static class Source implements Serializable {
-            public String sourceName;//来源名称
-            public int sourceNum;//数量
+            private String sourceName;//来源名称
+            private int sourceNum;//数量
+
+            public String getSourceName() {
+                return sourceName;
+            }
+
+            public void setSourceName(String sourceName) {
+                this.sourceName = sourceName;
+            }
+
+            public int getSourceNum() {
+                return sourceNum;
+            }
+
+            public void setSourceNum(int sourceNum) {
+                this.sourceNum = sourceNum;
+            }
         }
     }
 
-    public TextBarDataEntity parseData() {
-        TextBarDataEntity textBarDataEntity = new TextBarDataEntity();
+    public List<Record>  parseData(){
+        recordList = new ArrayList<>();
         Random r = new Random();
-        textBarDataEntity.overviewName = "TCL O2O";
-        textBarDataEntity.recordList = new ArrayList<>();
         for (int i= 0;i<=4;i++){
             Record record = new Record();
-            record.timeScale = "第" + (i+1) + "周" ;
-            record.sourceList = new ArrayList<>();
+            record.setTimeScale("第" + (i+1) + "周");
+
+            List<Record.Source> list = new ArrayList<>();
             for (int j=0; j<= 3; j++ ){
                 Record.Source source = new Record.Source();
-                source.sourceName = "TCL第" + (j+1) + "产业";
-                source.sourceNum = r.nextInt(10*(j+1));
-                record.sourceList.add(source);
+                source.setSourceName("TCL第" + (j+1) + "产业");
+                source.setSourceNum(r.nextInt(10*(j+1)));
+                list.add(source);
             }
             Record.Source source = new Record.Source();
-            source.sourceName = "TCL第五产业";
-            source.sourceNum = 100 - record.sourceList.get(0).sourceNum - record.sourceList.get(1).sourceNum
-                  - record.sourceList.get(2).sourceNum - record.sourceList.get(3).sourceNum;
-            record.sourceList.add(source);
-            textBarDataEntity.recordList.add(record);
+            source.setSourceName("TCL第5产业");
+            int sourceNum = 100 - list.get(0).getSourceNum() - list.get(1).getSourceNum()
+                    - list.get(2).getSourceNum() - list.get(3).getSourceNum();
+            source.setSourceNum(sourceNum);
+            list.add(source);
+            record.setSourceList(list);
+            recordList.add(record);
         }
-        return textBarDataEntity;
+        return recordList;
     }
 }
