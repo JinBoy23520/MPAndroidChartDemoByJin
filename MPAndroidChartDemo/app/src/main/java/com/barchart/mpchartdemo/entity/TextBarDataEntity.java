@@ -87,7 +87,6 @@ public class TextBarDataEntity {
         for (int i= 0;i<=4;i++){
             Record record = new Record();
             record.setTimeScale("第" + (i+1) + "周");
-
             List<Record.Source> list = new ArrayList<>();
             for (int j=0; j<= 3; j++ ){
                 Record.Source source = new Record.Source();
