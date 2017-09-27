@@ -3,6 +3,7 @@ MPAndroidChart项目实战Demo
 记录开发中遇到的问题和实现的效果
 <br>
 ![image](https://github.com/JinBoy23520/MPAndroidChartDemoByJin/blob/master/mpAndroidChart.gif ) 
+<br>
 ![image](https://github.com/JinBoy23520/MPAndroidChartDemoByJin/blob/v1.0.0/mpAndroidChart2.gif )
 <br>
 <br>
