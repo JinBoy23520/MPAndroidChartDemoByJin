@@ -36,3 +36,6 @@ MPAndroidChart项目实战Demo
 <br>
 [MPAndroidChart项目实战（八）——自定义分段堆积柱状图](http://blog.csdn.net/dt235201314/article/details/77534468 "鼠标悬停显示")
 <br>
+<br>
+[MPAndroidChart项目实战（九）——自定义带文字分段堆积柱状图](http://blog.csdn.net/dt235201314/article/details/78085430 "鼠标悬停显示")
+<br>
