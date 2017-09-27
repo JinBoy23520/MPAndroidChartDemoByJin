@@ -4,6 +4,8 @@ MPAndroidChart项目实战Demo
 <br>
 ![image](https://github.com/JinBoy23520/MPAndroidChartDemoByJin/blob/master/mpAndroidChart.gif )   
 <br>
+![image](https://github.com/JinBoy23520/MPAndroidChartDemoByJin/blob/v1.0.0/mpAndroidChart2.gif )
+<br>
 <br>
 [MPAndroidChart常见设置属性（一）——应用层](http://blog.csdn.net/dt235201314/article/details/52222088 "鼠标悬停显示")
 <br>
