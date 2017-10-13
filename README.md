@@ -1,6 +1,8 @@
 # MPAndroidChartDemoByJin
 Android 图表 MPAndroidChart + 自定义图表
+<br>
 MPAndroidChart项目实战Demo
+<br>
 记录开发中遇到的问题和实现的效果
 <br>
 ![image](https://github.com/JinBoy23520/MPAndroidChartDemoByJin/blob/master/mpAndroidChart.gif )   
